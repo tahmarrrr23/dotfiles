@@ -16,9 +16,7 @@
   "files.insertFinalNewline": true,
   "git.confirmSync": false,
   "path-intellisense.absolutePathToWorkspace": false,
-  "shellcheck.exclude": [
-    "1091"
-  ],
+  "shellcheck.exclude": ["1091"],
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
   "sortJSON.contextMenu": {
     "sortJSON": true,
