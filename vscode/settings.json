@@ -16,9 +16,7 @@
   "files.insertFinalNewline": true,
   "git.confirmSync": false,
   "path-intellisense.absolutePathToWorkspace": false,
-  "shellcheck.exclude": [
-    "1091"
-  ],
+  "shellcheck.exclude": ["1091"],
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
   "sortJSON.contextMenu": {
     "sortJSON": true,
@@ -35,6 +33,7 @@
   "window.zoomLevel": 1,
   "workbench.colorTheme": "SynthWave '84",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
   "workbench.tree.indent": 10,
   "workbench.tree.renderIndentGuides": "always"
 }
