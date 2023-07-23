@@ -10,6 +10,7 @@
 [ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
 
 # alias
+alias cleaner='find ~/ -path "~/Library/*" -prune -o -type f -name ".DS_Store" -delete -print'
 alias relogin="exec $SHELL -l"
 alias history="history -i"
 if [ -d "$HOMEBREW_PREFIX/opt/exa" ]; then
