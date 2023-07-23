@@ -16,6 +16,8 @@
   },
   "files.insertFinalNewline": true,
   "git.autofetch": true,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
   "material-icon-theme.hidesExplorerArrows": true,
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "sortJSON.contextMenu": {
