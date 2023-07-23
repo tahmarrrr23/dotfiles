@@ -1,24 +1,21 @@
-# path
-## homebrew
+# premise
 [ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
-## starship
-[ -f "/opt/homebrew/bin/starship" ] && eval "$(starship init zsh)"
-## asdf
-[ -f "/opt/homebrew/bin/asdf" ] && source "/opt/homebrew/opt/asdf/libexec/asdf.sh"
-## gnu-tar
-[ -d "/opt/homebrew/opt/gnu-tar" ] && export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
-## fzf
+
+# path
+[ -d "$HOMEBREW_PREFIX/opt/starship" ] && eval "$(starship init zsh)"
+[ -d "$HOMEBREW_PREFIX/opt/asdf" ] && source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
+[ -d "$HOMEBREW_PREFIX/opt/gnu-tar" ] && export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
-## zinit
 [ -d "$HOME/.local/share/zinit/zinit.git" ] && source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+[ -d "$HOME/.rb/bin" ] && export PATH="$HOME/.rb/bin:$PATH"
 
 # alias
 alias relogin="exec $SHELL -l"
 alias history="history -i"
-if [ -f "/opt/homebrew/bin/exa" ]; then
-  alias ls="exa -1 --icons --git"
-  alias ll="exa -l --icons --git"
-  alias la="exa -la --icons --git"
+if [ -d "$HOMEBREW_PREFIX/opt/exa" ]; then
+  alias ls="exa -1"
+  alias ll="exa -l --icons"
+  alias la="exa -la --icons"
 else
   alias ls="ls -1 --color=auto"
   alias ll="ls -l"
@@ -30,6 +27,10 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit snippet PZTM::history/init.zsh
 zinit snippet PZTM::completion/init.zsh
+zinit wait lucid is-snippet as"completion" for \
+  OMZP::docker/completions/_docker \
+  OMZP::docker-compose/_docker-compose
+zinit cdclear -q
 
 # history
 setopt HIST_NO_STORE
