@@ -1,7 +1,8 @@
 {
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
+  "black-formatter.importStrategy": "fromEnvironment",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "PlemolJP, Menlo, Monaco, 'Courier New', monospace",
@@ -14,10 +15,8 @@
     "**/__pycache__": true
   },
   "files.insertFinalNewline": true,
-  "git.confirmSync": false,
-  "path-intellisense.absolutePathToWorkspace": false,
-  "shellcheck.exclude": ["1091"],
-  "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "mypy-type-checker.importStrategy": "fromEnvironment",
   "sortJSON.contextMenu": {
     "sortJSON": true,
     "sortJSONAlphaNum": false,
@@ -33,6 +32,7 @@
   "window.zoomLevel": 1,
   "workbench.colorTheme": "SynthWave '84",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
   "workbench.tree.indent": 10,
   "workbench.tree.renderIndentGuides": "always"
 }
