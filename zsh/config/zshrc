@@ -7,7 +7,7 @@
 [ -d "$HOMEBREW_PREFIX/opt/gnu-tar" ] && export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 [ -d "$HOME/.local/share/zinit/zinit.git" ] && source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-[ -d "$HOME/.rb/bin" ] && export PATH="$HOME/.rb/bin:$PATH"
+[ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
 
 # alias
 alias relogin="exec $SHELL -l"
