@@ -15,6 +15,7 @@
     "**/__pycache__": true
   },
   "files.insertFinalNewline": true,
+  "git.autofetch": true,
   "material-icon-theme.hidesExplorerArrows": true,
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "sortJSON.contextMenu": {
