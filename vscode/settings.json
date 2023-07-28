@@ -2,6 +2,7 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
+  "ansible.python.interpreterPath": "/opt/homebrew/bin/python3",
   "black-formatter.importStrategy": "fromEnvironment",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
