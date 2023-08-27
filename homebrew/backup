@@ -1,6 +1,0 @@
-#!/bin/sh
-set -eu
-cd "$(dirname "$0")"
-. "../common/prepare"
-
-brew bundle dump --file="./Brewfile" --force -d
