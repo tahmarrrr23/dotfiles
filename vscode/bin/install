@@ -6,4 +6,4 @@ cd "$(dirname "$0")"
 formula='visual-studio-code'
 brew list $formula >/dev/null 2>&1 || brew install $formula
 
-ln -s -f "$PWD/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+ln -s -f "../settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
