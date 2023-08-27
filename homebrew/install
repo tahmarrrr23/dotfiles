@@ -1,7 +1,0 @@
-#!/bin/sh
-set -eu
-cd "$(dirname "$0")"
-. "../common/prepare"
-
-brew bundle --file="./Brewfile" --cleanup
-"$(brew --prefix)"/opt/fzf/install --no-bash --no-fish --all
