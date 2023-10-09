@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")"
+root="$(dirname "$(pwd)")"
+[ ! -d "/opt/homebrew" ] && echo "please install homebrew" && exit 1
+
+# install from brew
+/opt/homebrew/bin/brew install iterm2
