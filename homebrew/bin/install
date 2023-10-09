@@ -1,8 +1,15 @@
 #!/bin/sh
 set -eu
 cd "$(dirname "$0")"
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+root="$(dirname "$(pwd)")"
+[ ! -d "/opt/homebrew" ] && echo "please install homebrew" && exit 1
 
-brew bundle --file="../Brewfile" --cleanup
+# restore from backup
+/opt/homebrew/bin/brew bundle \
+  --brews --casks --taps \
+  --no-lock \
+  --force \
+  --file="$root/Brewfile"
 
+# setup
 "$(brew --prefix)"/opt/fzf/install --no-bash --no-fish --all
