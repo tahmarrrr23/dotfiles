@@ -1,9 +1,20 @@
 #!/bin/sh
 set -eu
 cd "$(dirname "$0")"
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+root="$(dirname "$(pwd)")"
+[ ! -d "/opt/homebrew" ] && echo "please install homebrew" && exit 1
 
-formula='visual-studio-code'
-brew list $formula >/dev/null 2>&1 || brew install $formula
+# install from brew
+/opt/homebrew/bin/brew install visual-studio-code
 
-ln -s -f "../settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+# restore from backup
+/opt/homebrew/bin/brew bundle \
+  --vscode \
+  --no-lock \
+  --force \
+  --file="$root/Brewfile"
+
+# linking settings
+ln \
+  -s \
+  -f "$root/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"

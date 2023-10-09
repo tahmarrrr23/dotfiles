@@ -1,0 +1,5 @@
+vscode "christian-kohler.path-intellisense"
+vscode "eamodio.gitlens"
+vscode "foxundermoon.shell-format"
+vscode "PKief.material-icon-theme"
+vscode "timonwong.shellcheck"
