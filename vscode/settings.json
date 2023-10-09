@@ -9,6 +9,7 @@
   "explorer.compactFolders": false,
   "files.autoGuessEncoding": true,
   "files.insertFinalNewline": true,
+  "git.autofetch": true,
   "material-icon-theme.activeIconPack": "react",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
