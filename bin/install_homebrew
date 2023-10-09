@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/premise"
+
+brew bundle \
+  --brews --casks --taps \
+  --no-lock \
+  --force \
+  --file="$DOTFILES_OPT/homebrew/Brewfile"
+
+"$(brew --prefix)"/opt/fzf/install --all --no-bash --no-fish --no-update-rc
