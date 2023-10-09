@@ -1,24 +1,16 @@
 #!/bin/sh
-set -eu
-cd "$(dirname "$0")"
-root="$(dirname "$(pwd)")"
-[ ! -d "/opt/homebrew" ] && echo "please install homebrew" && exit 1
+. "$(dirname "$0")/premise"
 
-# install from brew
-/opt/homebrew/bin/brew install zsh
+brew install zsh
 
-# set default shell
 zsh_bin=$(brew --prefix)/bin/zsh
 if ! grep -q "$zsh_bin" </etc/shells; then
   sudo sh -c "echo $zsh_bin >> /etc/shells"
   chsh -s "$zsh_bin"
-else
-  echo "skip"
 fi
 
-# install zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname "$ZINIT_HOME")"
 [ ! -d "$ZINIT_HOME"/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 
-ln -s -f "$root/zshrc" "$HOME/.zshrc"
+ln -s -f "$DOTFILES_OPT"/zsh/zshrc "$HOME"/.zshrc

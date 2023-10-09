@@ -1,0 +1,30 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")"
+
+echo "----- start premise ------"
+
+DOTFILES_ROOT=$(dirname "$PWD")
+echo "DOTFILES_ROOT: $DOTFILES_ROOT"
+DOTFILES_OPT=$DOTFILES_ROOT/opt
+echo "DOTFILES_OPT : $DOTFILES_OPT"
+
+printf "Check 'Rosetta 2' installation: "
+if [ ! -d "/Library/Apple/usr/share/rosetta" ]; then
+  echo "Please install Rosetta 2"
+  exit 1
+else
+  echo "OK"
+fi
+
+printf "Check 'Homebrew' installation: "
+if [ ! -d "/opt/homebrew" ]; then
+  echo "Please install Homebrew"
+  exit 1
+else
+  echo "OK"
+fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+echo "----- end premise ------"
