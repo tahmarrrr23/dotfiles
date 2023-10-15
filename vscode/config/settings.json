@@ -1,15 +1,27 @@
 {
+  "[python]": {
+    "editor.tabSize": 4
+  },
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "phase",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.dragAndDrop": false,
   "editor.fontFamily": "HackGen-Regular, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 18,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
+  "editor.showFoldingControls": "always",
+  "editor.tabSize": 2,
   "explorer.compactFolders": false,
+  "explorer.incrementalNaming": "smart",
   "files.autoGuessEncoding": true,
+  "files.exclude": {
+    "**/__pycache__": true
+  },
   "files.insertFinalNewline": true,
   "git.autofetch": true,
+  "git.confirmSync": false,
   "material-icon-theme.activeIconPack": "react",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
