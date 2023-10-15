@@ -5,12 +5,13 @@
 [ -d "$HOMEBREW_PREFIX/opt/starship" ] && eval "$(starship init zsh)"
 [ -d "$HOMEBREW_PREFIX/opt/asdf" ] && source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
 [ -d "$HOMEBREW_PREFIX/opt/gnu-tar" ] && export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
+[ -d "$HOMEBREW_PREFIX/opt/curl" ] && export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
-[ -d "$HOME/.local/share/zinit/zinit.git" ] && source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 [ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
+[ -d "$HOME/.local/share/zinit/zinit.git" ] && source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 
 # alias
-alias cleaner='find ~/ -path "~/Library/*" -prune -o -type f -name ".DS_Store" -delete -print'
+alias cleaner='find $HOME -not -path "$HOME/Library/*" -type f -name ".DS_Store" -delete -print'
 alias relogin="exec $SHELL -l"
 alias history="history -i"
 if [ -d "$HOMEBREW_PREFIX/opt/exa" ]; then
@@ -25,12 +26,15 @@ fi
 
 # zinit
 zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit snippet PZTM::history/init.zsh
-zinit snippet PZTM::completion/init.zsh
+zinit light zsh-users/zsh-syntax-highlighting
+zinit wait lucid is-snippet for \
+  PZTM::history \
+  PZTM::completion
 zinit wait lucid is-snippet as"completion" for \
   OMZP::docker/completions/_docker \
-  OMZP::docker-compose/_docker-compose
+  OMZP::docker-compose/_docker-compose \
+  OMZP::yarn/_yarn \
+  OMZP::pip/_pip
 zinit cdclear -q
 
 # history
@@ -40,7 +44,7 @@ setopt HIST_REDUCE_BLANKS
 unsetopt HIST_IGNORE_ALL_DUPS
 export HISTSIZE=100000
 export SAVEHIST=100000
-HISTORY_IGNORE="(cd|la*|ll*|ls*|rm*|relogin)"
+HISTORY_IGNORE="(cd*|la*|ll*|ls*|rm*|relogin|history)"
 zshaddhistory() {
   emulate -L zsh
   [[ ${1%%$'\n'} != ${~HISTORY_IGNORE} ]]
