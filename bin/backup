@@ -1,9 +1,16 @@
 #!/bin/sh
 . "$(dirname "$0")/premise"
 
+# homebrew
 brew bundle dump \
   --brews --casks --taps \
   --no-lock \
   --force \
   --file="$DOTFILES_OPT"/homebrew/Brewfile \
-  -d
+
+# vscode
+brew bundle dump \
+  --vscode \
+  --no-lock \
+  --force \
+  --file="$DOTFILES_OPT"/vscode/Brewfile \

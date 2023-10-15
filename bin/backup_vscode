@@ -1,9 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/premise"
-
-brew bundle dump \
-  --vscode \
-  --no-lock \
-  --force \
-  --file="$DOTFILES_OPT"/vscode/Brewfile \
-  -d
