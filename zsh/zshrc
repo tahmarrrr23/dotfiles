@@ -26,10 +26,9 @@ fi
 
 # zinit
 zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting
-zinit wait lucid is-snippet for \
-  PZTM::history \
-  PZTM::completion
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit snippet PZTM::history/init.zsh
+zinit snippet PZTM::completion/init.zsh
 zinit wait lucid is-snippet as"completion" for \
   OMZP::docker/completions/_docker \
   OMZP::docker-compose/_docker-compose \
