@@ -1,5 +1,6 @@
 {
   "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.tabSize": 4
   },
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
@@ -30,6 +31,7 @@
   "powermode.combo.location": "off",
   "powermode.enabled": true,
   "powermode.shake.enabled": false,
+  "svg.preview.mode": "svg",
   "synthwave84.brightness": 0,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.zoomLevel": 1,
