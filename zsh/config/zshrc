@@ -14,10 +14,10 @@
 alias cleaner='find $HOME -not -path "$HOME/Library/*" -type f -name ".DS_Store" -delete -print'
 alias relogin="exec $SHELL -l"
 alias history="history -i"
-if [ -d "$HOMEBREW_PREFIX/opt/exa" ]; then
-  alias ls="exa -1"
-  alias ll="exa -l --icons"
-  alias la="exa -la --icons"
+if [ -d "$HOMEBREW_PREFIX/opt/eza" ]; then
+  alias ls="eza -1"
+  alias ll="eza -l --icons"
+  alias la="eza -la --icons"
 else
   alias ls="ls -1 --color=auto"
   alias ll="ls -l"
