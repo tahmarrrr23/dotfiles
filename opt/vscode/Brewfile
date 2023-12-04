@@ -1,4 +1,5 @@
 vscode "bierner.markdown-preview-github-styles"
+vscode "bradlc.vscode-tailwindcss"
 vscode "charliermarsh.ruff"
 vscode "christian-kohler.path-intellisense"
 vscode "codezombiech.gitignore"
