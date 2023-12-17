@@ -18,6 +18,7 @@
   "editor.tabSize": 2,
   "explorer.compactFolders": false,
   "explorer.incrementalNaming": "smart",
+  "extensions.ignoreRecommendations": true,
   "files.autoGuessEncoding": true,
   "files.exclude": {
     "**/__pycache__": true
