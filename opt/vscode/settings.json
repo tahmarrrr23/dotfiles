@@ -46,6 +46,7 @@
   "synthwave84.brightness": 0,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.zoomLevel": 1,
+  "workbench.activityBar.location": "top",
   "workbench.colorTheme": "SynthWave '84",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
