@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/premise"
+
+# install
+brew install sheldon
+
+# setup
+if [ ! -d "$HOME/.config/sheldon" ]; then
+  sheldon init --shell zsh
+fi
+
+# link
+ln -s -f "$DOTFILES_OPT"/sheldon/plugins.toml "$HOME"/.config/sheldon/plugins.toml
