@@ -7,15 +7,6 @@ echo "#    Howdy!🤠    #"
 echo "##################"
 echo ""
 
-echo "🤠 xcode-select"
-if [ ! -d "/Library/Developer/CommandLineTools" ]; then
-  xcode-select --install
-else
-  echo "already installed"
-fi
-
-echo ""
-
 echo "🤠 rosetta 2"
 if [ ! -d "/Library/Apple/usr/share/rosetta" ]; then
   softwareupdate --install-rosetta --agree-to-license
@@ -35,11 +26,18 @@ fi
 echo ""
 
 echo "🤠 essential software"
+/opt/homebrew/bin/brew tap homebrew/cask-fonts
 /opt/homebrew/bin/brew install \
   google-chrome \
   google-japanese-ime \
   rectangle \
   scroll-reverser \
-  logitech-g-hub
+  logitech-g-hub \
+  font-hackgen \
+  font-hackgen-nerd
 
+echo ""
+echo "##################"
+echo "#    Adios!🤠    #"
+echo "##################"
 echo ""
