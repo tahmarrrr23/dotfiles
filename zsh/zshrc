@@ -1,14 +1,18 @@
 # premise
 [ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# path
-[ -d "$HOMEBREW_PREFIX/opt/starship" ] && eval "$(starship init zsh)"
-[ -d "$HOMEBREW_PREFIX/opt/asdf" ] && source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
-[ -d "$HOMEBREW_PREFIX/opt/gnu-tar" ] && export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
-[ -d "$HOMEBREW_PREFIX/opt/curl" ] && export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
-[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
-[ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
-[ -d "$HOME/.local/share/zinit/zinit.git" ] && source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+# history
+setopt HIST_NO_STORE
+setopt INC_APPEND_HISTORY
+setopt HIST_REDUCE_BLANKS
+unsetopt HIST_IGNORE_ALL_DUPS
+export HISTSIZE=100000
+export SAVEHIST=100000
+HISTORY_IGNORE="(cd*|la*|ll*|ls*|rm*|relogin|history)"
+zshaddhistory() {
+  emulate -L zsh
+  [[ ${1%%$'\n'} != ${~HISTORY_IGNORE} ]]
+}
 
 # alias
 alias cleaner='find $HOME -not -path "$HOME/Library/*" -type f -name ".DS_Store" -delete -print'
@@ -24,29 +28,14 @@ else
   alias la="ls -la"
 fi
 
-# zinit
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit snippet PZTM::history/init.zsh
-zinit snippet PZTM::completion/init.zsh
-zinit cdclear -q
-
-# history
-setopt HIST_NO_STORE
-setopt INC_APPEND_HISTORY
-setopt HIST_REDUCE_BLANKS
-unsetopt HIST_IGNORE_ALL_DUPS
-export HISTSIZE=100000
-export SAVEHIST=100000
-HISTORY_IGNORE="(cd*|la*|ll*|ls*|rm*|relogin|history)"
-zshaddhistory() {
-  emulate -L zsh
-  [[ ${1%%$'\n'} != ${~HISTORY_IGNORE} ]]
-}
-
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+# path
+[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+[ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
+[ -d "$HOMEBREW_PREFIX/opt/curl" ] && export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
+[ -d "$HOMEBREW_PREFIX/opt/gnu-tar" ] && export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
+[ -d "$HOMEBREW_PREFIX/opt/asdf" ] && source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
+[ -d "$HOMEBREW_PREFIX/opt/sheldon" ] && eval "$(sheldon source)"
+[ -d "$HOMEBREW_PREFIX/opt/starship" ] && eval "$(starship init zsh)"
 
 autoload -Uz compinit
 compinit
