@@ -3,6 +3,7 @@
         .__________________________.
         | .___________________. |==|
         | |                   | |  |
+        | |                   | |  |
         | |     .dotfiles     | |  |
         | |    tahmarrrr23    | |  |
         | |                   | |  |
@@ -20,7 +21,5 @@
       \______________________________/
 
 ```shell
-xcode-select --install
-softwareupdate --install-rosetta --agree-to-license
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/tahmarrrr23/.dotfiles/main/howdy.sh)"
 ```
