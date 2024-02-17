@@ -7,8 +7,8 @@ cd "$(dirname "$0")"
 # zsh
 ln -nfs "$PWD/zsh/zshrc" "$HOME/.zshrc"
 
-# # vscode
-# ln -nfs "$PWD/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+# vscode
+ln -nfs "$PWD/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 
 # sheldon
 if [ ! -d "$HOME/.config/sheldon" ]; then
@@ -18,3 +18,6 @@ ln -nfs "$PWD"/sheldon/plugins.toml "$HOME"/.config/sheldon/plugins.toml
 
 # tabby
 ln -nfs "$PWD/tabby/config.yaml" "$HOME/Library/Application Support/tabby/config.yaml"
+
+# starship
+ln -nfs "$PWD/starship/starship.toml" "$HOME/.config/starship.toml"
