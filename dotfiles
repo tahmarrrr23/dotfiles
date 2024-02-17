@@ -41,6 +41,12 @@ if [ "$target" = "vscode" ]; then
   brew bundle --vscode --no-lock --force --file="$root/vscode/Brewfile"
   ln -s -f "$root/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 fi
+
+if [ "$target" = "tabby" ]; then
+  brew install tabby
+  ln -s -f "$root/tabby/config.yaml" "$HOME/Library/Application Support/tabby/config.yaml"
+fi
+
 if [ "$target" = "sheldon" ]; then
   brew install sheldon
   sheldon init --shell zsh
