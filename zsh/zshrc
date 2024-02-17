@@ -1,23 +1,29 @@
-# premise
 [ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
+autoload -Uz compinit
+compinit
+
+# path
+[ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
+[ -d "$HOMEBREW_PREFIX/opt/curl" ] && export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
+[ -d "$HOMEBREW_PREFIX/opt/gnu-tar" ] && export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
+[ -d "$HOMEBREW_PREFIX/opt/asdf" ] && source "$HOMEBREW_PREFIX"/opt/asdf/libexec/asdf.sh
+[ -d "$HOMEBREW_PREFIX/opt/sheldon" ] && eval "$(sheldon source)"
+
 # history
-setopt HIST_NO_STORE
-setopt INC_APPEND_HISTORY
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+HISTORY_IGNORE="(cd*|pwd|l[sal]*|code*|git*|relogin|history*|cat*)"
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
 setopt HIST_REDUCE_BLANKS
-unsetopt HIST_IGNORE_ALL_DUPS
-export HISTSIZE=100000
-export SAVEHIST=100000
-HISTORY_IGNORE="(cd*|la*|ll*|ls*|rm*|relogin|history)"
-zshaddhistory() {
-  emulate -L zsh
-  [[ ${1%%$'\n'} != ${~HISTORY_IGNORE} ]]
-}
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
+setopt INC_APPEND_HISTORY
 
 # alias
-alias cleaner='find $HOME -not -path "$HOME/Library/*" -type f -name ".DS_Store" -delete -print'
 alias relogin="exec $SHELL -l"
-alias history="history -i"
 if [ -d "$HOMEBREW_PREFIX/opt/eza" ]; then
   alias ls="eza -1"
   alias ll="eza -l --icons"
@@ -28,14 +34,4 @@ else
   alias la="ls -la"
 fi
 
-# path
-[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
-[ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
-[ -d "$HOMEBREW_PREFIX/opt/curl" ] && export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
-[ -d "$HOMEBREW_PREFIX/opt/gnu-tar" ] && export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
-[ -d "$HOMEBREW_PREFIX/opt/asdf" ] && source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
-[ -d "$HOMEBREW_PREFIX/opt/sheldon" ] && eval "$(sheldon source)"
 [ -d "$HOMEBREW_PREFIX/opt/starship" ] && eval "$(starship init zsh)"
-
-autoload -Uz compinit
-compinit
