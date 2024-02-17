@@ -242,6 +242,7 @@ appearance:
   opacity: 0.87
   tabsInFullscreen: true
   lastTabClosesWindow: true
+  colorSchemeMode: auto
 hacks: {}
 providerBlacklist: []
 commandBlacklist: []
