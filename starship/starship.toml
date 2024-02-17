@@ -1,6 +1,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-add_newline = false
+scan_timeout = 10
 
 [character]
-success_symbol = '[\$](foreground)'
+success_symbol = '[\$](bold)'
+error_symbol = '[\$](bold red)'
+
+[directory]
+style = 'bold 4'
