@@ -24,6 +24,7 @@ setopt INC_APPEND_HISTORY
 
 # alias
 alias relogin="exec $SHELL -l"
+alias top="htop"
 if [ -d "$HOMEBREW_PREFIX/opt/eza" ]; then
   alias ls="eza -1"
   alias ll="eza -l --icons"
