@@ -13,13 +13,10 @@ else
   echo "homebrew already installed"
 fi
 
-/opt/homebrew/bin/brew tap homebrew/cask-fonts
+/opt/homebrew/bin/brew tap \
+  homebrew/cask-fonts \
+  homebrew/services
 
 /opt/homebrew/bin/brew install \
-  google-chrome \
-  google-japanese-ime \
   rectangle \
-  scroll-reverser \
-  logitech-g-hub \
-  font-plemol-jp \
-  font-plemol-jp-nf
+  scroll-reverser
