@@ -14,7 +14,6 @@ else
 fi
 
 /opt/homebrew/bin/brew tap \
-  homebrew/cask-fonts \
   homebrew/services
 
 /opt/homebrew/bin/brew install \
