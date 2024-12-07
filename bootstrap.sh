@@ -1,4 +1,5 @@
 #!/bin/sh
+
 set -eu
 
 if [ ! -d "/Library/Apple/usr/share/rosetta" ]; then
@@ -13,9 +14,9 @@ else
   echo "homebrew already installed"
 fi
 
-/opt/homebrew/bin/brew tap \
-  homebrew/services
+/opt/homebrew/bin/brew install --formula \
+  git
 
-/opt/homebrew/bin/brew install \
+/opt/homebrew/bin/brew install --cask \
   rectangle \
   scroll-reverser
