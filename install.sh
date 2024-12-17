@@ -15,6 +15,7 @@ if [ ! -d "$HOME/.config/sheldon" ]; then
   sheldon init --shell zsh
 fi
 ln -nfs "$PWD"/sheldon/plugins.toml "$HOME"/.config/sheldon/plugins.toml
+ln -nfs "$PWD"/sheldon/local "$HOME"/.config/sheldon/local
 
 # tabby
 ln -nfs "$PWD/tabby/config.yaml" "$HOME/Library/Application Support/tabby/config.yaml"
