@@ -8,3 +8,4 @@ if [ ! -d "$HOME/.config/sheldon" ]; then
 fi
 
 ln -nfs "$PWD"/config/plugins.toml "$HOME"/.config/sheldon/plugins.toml
+ln -nfs "$PWD"/config/local "$HOME"/.config/sheldon/local
