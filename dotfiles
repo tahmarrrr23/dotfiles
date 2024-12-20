@@ -42,11 +42,6 @@ if [ "$target" = "vscode" ]; then
   ln -s -f "$root/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 fi
 
-if [ "$target" = "tabby" ]; then
-  brew install tabby
-  ln -s -f "$root/tabby/config.yaml" "$HOME/Library/Application Support/tabby/config.yaml"
-fi
-
 if [ "$target" = "sheldon" ]; then
   brew install sheldon
   mkdir -p "$HOME"/.config
