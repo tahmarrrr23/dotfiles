@@ -27,5 +27,5 @@ apply = ["defer"]
 
 [plugins.local-sync]
 local = "~/.dotfiles/prompt/zsh"
-use = ["{history,source}.zsh"]
+use = ["{history,activate}.zsh"]
 apply = ["source"]

@@ -1,7 +1,7 @@
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-HISTORY_IGNORE="(cd*|pwd|l[sal]*|code*|git*|relogin|history*|cat*)"
+HISTORY_IGNORE="(cd*|pwd|l[sal]*|code*|git*|relogin|history*|cat*|brew*|which*)"
 setopt SHARE_HISTORY
 setopt EXTENDED_HISTORY
 setopt HIST_REDUCE_BLANKS
