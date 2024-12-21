@@ -16,9 +16,11 @@ brew bundle --file="$root_path/vscode/Brewfile"
 
 mkdir -p "$HOME"/.config/sheldon
 mkdir -p "$HOME"/.config/starship
+mkdir -p "$HOME"/.config/wezterm
 
 ln -s -f "$root_path/prompt/zsh/zshrc" "$HOME/.zshrc"
 ln -s -f "$root_path/prompt/zsh/zprofile" "$HOME/.zprofile"
 ln -s -f "$root_path/prompt/sheldon/config.toml" "$HOME/.config/sheldon/config.toml"
 ln -s -f "$root_path/prompt/starship/config.toml" "$HOME/.config/starship/config.toml"
+ln -s -f "$root_path/wezterm/wezterm.lua" "$HOME/.config/wezterm/wezterm.lua"
 ln -s -f "$root_path/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
