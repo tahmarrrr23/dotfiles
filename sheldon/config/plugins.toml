@@ -15,6 +15,10 @@ apply = ["defer"]
 github = "zsh-users/zsh-autosuggestions"
 apply = ["defer"]
 
+[plugins.docker-completions]
+remote = 'https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker'
+apply = ['fpath']
+
 [plugins.completion]
 github = "sorin-ionescu/prezto"
 dir = "modules/completion"
