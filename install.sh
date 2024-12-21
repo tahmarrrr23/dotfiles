@@ -22,3 +22,7 @@ ln -nfs "$PWD/tabby/config.yaml" "$HOME/Library/Application Support/tabby/config
 
 # starship
 ln -nfs "$PWD/starship/starship.toml" "$HOME/.config/starship.toml"
+
+# wezterm
+mkdir -p "$HOME"/.config/wezterm
+ln -nfs "$PWD/wezterm/wezterm.lua" "$HOME/.config/wezterm/wezterm.lua"
