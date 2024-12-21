@@ -4,7 +4,7 @@ set -eu
 cd "$(dirname "$0")"
 root_path=$PWD
 
-brew_cmd="/opt/homebrew"
+brew_cmd="/opt/homebrew/bin/brew"
 if [ -f "$brew_cmd" ]; then
   eval "$($brew_cmd shellenv)"
 else
