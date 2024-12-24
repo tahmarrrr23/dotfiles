@@ -2,7 +2,7 @@ local wezterm = require "wezterm"
 local config = wezterm.config_builder()
 
 -- theme
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Catppuccin Frappe"
 
 -- font
 config.font_size = 16
