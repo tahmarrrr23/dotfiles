@@ -6,7 +6,7 @@ config.color_scheme = "Catppuccin Mocha"
 
 -- font
 config.font_size = 16
-config.font = wezterm.font("PlemolJP Console NF")
+config.font = wezterm.font("Moralerspace Neon NF")
 
 -- tab
 config.show_new_tab_button_in_tab_bar = false
