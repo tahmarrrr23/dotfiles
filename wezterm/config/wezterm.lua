@@ -23,5 +23,6 @@ config.keys = {
 
 -- others
 config.default_cursor_style = "SteadyBar"
+config.window_background_opacity = 0.85
 
 return config
