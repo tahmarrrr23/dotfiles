@@ -1,1 +1,1 @@
-[ -f "/opt/homebrew/bin/sheldon" ] && eval "$(/opt/homebrew/bin/sheldon source)"
+command -v sheldon > /dev/null 2>&1 && eval "$(/opt/homebrew/bin/sheldon source)"
