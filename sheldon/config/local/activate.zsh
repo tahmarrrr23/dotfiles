@@ -1,4 +1,4 @@
-[ -f "/opt/homebrew/bin/mise" ] && eval "$(mise activate zsh)"
-[ -f "/opt/homebrew/bin/fzf" ] && eval "$(fzf --zsh)"
-[ -f "$HOME/.rd/bin/docker" ] && source <(docker completion zsh)
-[ -f "/opt/homebrew/bin/starship" ] && eval "$(starship init zsh)"
+command -v mise > /dev/null 2>&1 && eval "$(mise activate zsh)"
+command -v fzf > /dev/null 2>&1 && eval "$(fzf --zsh)"
+command -v docker > /dev/null 2>&1 && source <(docker completion zsh)
+command -v starship > /dev/null 2>&1 && eval "$(starship init zsh)"
