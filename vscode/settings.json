@@ -34,8 +34,8 @@
   "git.confirmSync": false,
   "git.mergeEditor": true,
 
-  "extensions.ignoreRecommendations": true,
   "catppuccin-icons.hidesExplorerArrows": true,
+  "extensions.ignoreRecommendations": true,
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "path-intellisense.absolutePathToWorkspace": false,
   "path-intellisense.showHiddenFiles": true,
