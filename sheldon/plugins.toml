@@ -8,16 +8,12 @@ apply = ["source"]
 defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
 
 [plugins.syntax-highlighting]
-github = "zdharma/fast-syntax-highlighting"
+github = "zsh-users/zsh-syntax-highlighting"
 apply = ["defer"]
 
 [plugins.autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 apply = ["defer"]
-
-[plugins.docker-completions]
-remote = 'https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker'
-apply = ['fpath']
 
 [plugins.completion]
 github = "sorin-ionescu/prezto"
