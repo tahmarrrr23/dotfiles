@@ -10,6 +10,9 @@
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
+  "files.exclude": {
+    "**/__pycache__": true
+  },
 
   "diffEditor.renderSideBySide": false,
   "editor.bracketPairColorization.enabled": true,
@@ -17,6 +20,7 @@
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.dragAndDrop": false,
   "editor.fontFamily": "Moralerspace Neon NF",
   "editor.fontSize": 16,
