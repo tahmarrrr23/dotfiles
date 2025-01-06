@@ -1,0 +1,36 @@
+# general
+initial-window = false
+
+# theme
+theme = catppuccin-frappe
+
+# font
+font-family = "Moralerspace Neon NF"
+font-size = 16
+
+# appearance
+background-blur-radius = 10
+background-opacity = 0.85
+cursor-style = "underline"
+cursor-style-blink = false
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = transparent
+mouse-hide-while-typing = true
+scrollback-limit = 1000000
+window-padding-balance = true
+window-padding-x = 20
+window-padding-y = 20
+
+# copy & paste
+clipboard-paste-bracketed-safe = true
+clipboard-paste-protection = true
+clipboard-read = allow
+clipboard-trim-trailing-spaces = true
+clipboard-write = allow
+copy-on-select = false
+
+# quick terminal
+quick-terminal-animation-duration = 0.1
+quick-terminal-position = "bottom"
+quick-terminal-screen = "main"
+keybind = "global:cmd+shift+space=toggle_quick_terminal"
