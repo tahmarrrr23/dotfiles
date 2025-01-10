@@ -44,5 +44,6 @@
   "path-intellisense.absolutePathToWorkspace": false,
   "path-intellisense.showHiddenFiles": true,
   "python.analysis.autoImportCompletions": true,
+  "python.analysis.importFormat": "relative",
   "python.analysis.typeCheckingMode": "basic"
 }
