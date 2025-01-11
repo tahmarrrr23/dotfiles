@@ -17,9 +17,8 @@ macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = transparent
 mouse-hide-while-typing = true
 scrollback-limit = 1000000
-window-padding-balance = true
-window-padding-x = 20
-window-padding-y = 0
+window-padding-x = 10
+window-padding-y = 10,0
 
 # copy & paste
 clipboard-paste-bracketed-safe = true
