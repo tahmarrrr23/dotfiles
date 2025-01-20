@@ -34,6 +34,7 @@ configure() {
   ln -s -f "$root_path/prompt/zsh/zprofile" "$HOME/.zprofile"
   ln -s -f "$root_path/prompt/sheldon/plugins.toml" "$HOME/.config/sheldon/plugins.toml"
   ln -s -f "$root_path/prompt/starship/starship.toml" "$HOME/.config/starship.toml"
+  ln -s -f "$root_path/prompt/zsh" "$HOME/.config/zsh"
   ln -s -f "$root_path/wezterm/wezterm.lua" "$HOME/.config/wezterm/wezterm.lua"
   ln -s -f "$root_path/ghostty/config" "$HOME/.config/ghostty/config"
   ln -s -f "$root_path/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"

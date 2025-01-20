@@ -21,11 +21,11 @@ dir = "modules/completion"
 use = ['init.zsh']
 
 [plugins.local-async]
-local = "~/.dotfiles/prompt/zsh"
+local = "~/.config/zsh"
 use = ["{alias,path}.zsh"]
 apply = ["defer"]
 
 [plugins.local-sync]
-local = "~/.dotfiles/prompt/zsh"
+local = "~/.config/zsh"
 use = ["{history,activate}.zsh"]
 apply = ["source"]
