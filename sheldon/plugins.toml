@@ -21,11 +21,11 @@ dir = "modules/completion"
 use = ['init.zsh']
 
 [plugins.local-async]
-local = "~/.config/zsh"
+local = "~/.config/sheldon/plugins"
 use = ["{alias,path}.zsh"]
 apply = ["defer"]
 
 [plugins.local-sync]
-local = "~/.config/zsh"
+local = "~/.config/sheldon/plugins"
 use = ["{history,activate}.zsh"]
 apply = ["source"]
