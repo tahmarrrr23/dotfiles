@@ -1,31 +1,16 @@
 shell = "zsh"
 
-[plugins.zsh-defer]
-github = "romkatv/zsh-defer"
-apply = ["source"]
-
-[templates]
-defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
-
 [plugins.syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
-apply = ["defer"]
 
 [plugins.autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
-apply = ["defer"]
 
 [plugins.completion]
 github = "sorin-ionescu/prezto"
 dir = "modules/completion"
 use = ['init.zsh']
 
-[plugins.local-async]
+[plugins.local]
 local = "~/.config/sheldon/local"
-use = ["{alias,path}.zsh"]
-apply = ["defer"]
-
-[plugins.local-sync]
-local = "~/.config/sheldon/local"
-use = ["{history,activate}.zsh"]
-apply = ["source"]
+use = ["{init,path,alias,history,completion}.zsh"]
