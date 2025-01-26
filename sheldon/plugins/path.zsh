@@ -1,4 +1,15 @@
-[ -d "/opt/homebrew/opt/curl/bin" ] && export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-[ -d "/opt/homebrew/opt/gnu-tar/libexec/gnubin" ] && export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
-[ -d "/opt/homebrew/opt/coreutils/libexec/gnubin" ] && export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-[ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
+if [ -d "$HOMEBREW_CELLAR/curl" ]; then
+  export PATH="$HOMEBREW_REPOSITORY/opt/curl/bin:$PATH"
+fi
+
+if [ -d "$HOMEBREW_CELLAR/gnu-tar" ]; then
+  export PATH="$HOMEBREW_REPOSITORY/opt/gnu-tar/libexec/gnubin:$PATH"
+fi
+
+if [ -d "$HOMEBREW_CELLAR/coreutils" ]; then
+  export PATH="$HOMEBREW_REPOSITORY/opt/coreutils/libexec/gnubin:$PATH"
+fi
+
+if [ -d "$HOMEBREW_CELLAR/rancher" ]; then
+  export PATH="$HOME/.rd/bin:$PATH"
+fi
