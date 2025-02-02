@@ -1,19 +1,8 @@
 {
+  "GitCommitPlugin.MaxSubjectCharacters": 30,
+  "GitCommitPlugin.ShowEmoji": false,
   "breadcrumbs.enabled": false,
-  "explorer.compactFolders": false,
-  "explorer.incrementalNaming": "smart",
-  "window.commandCenter": false,
-  "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "Catppuccin Frappé",
-  "workbench.iconTheme": "catppuccin-frappe",
-  "workbench.layoutControl.enabled": false,
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.startupEditor": "none",
-  "workbench.tree.indent": 16,
-  "files.exclude": {
-    "**/__pycache__": true
-  },
-
+  "catppuccin-icons.hidesExplorerArrows": true,
   "diffEditor.renderSideBySide": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
@@ -27,25 +16,34 @@
   "editor.guides.bracketPairs": "active",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
+  "explorer.incrementalNaming": "smart",
+  "extensions.ignoreRecommendations": true,
   "files.autoGuessEncoding": true,
+  "files.exclude": {
+    "**/__pycache__": true
+  },
   "files.insertFinalNewline": true,
-  "html.autoClosingTags": true,
-
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.mergeEditor": true,
-
-  "catppuccin-icons.hidesExplorerArrows": true,
-  "extensions.ignoreRecommendations": true,
-  "GitCommitPlugin.ShowEmoji": false,
+  "html.autoClosingTags": true,
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "path-intellisense.absolutePathToWorkspace": false,
   "path-intellisense.showHiddenFiles": true,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.importFormat": "relative",
-  "python.analysis.typeCheckingMode": "off"
+  "python.analysis.typeCheckingMode": "off",
+  "window.commandCenter": false,
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.layoutControl.enabled": false,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 16
 }
