@@ -1,10 +1,14 @@
 HISTFILE=~/.zsh_history
-HISTSIZE=1000000
+HISTSIZE=1000
 SAVEHIST=1000000
 HISTORY_IGNORE="(cd*|rm*|pwd|l[sal]*|code*|git*|relogin|history*|cat*|which*)"
+setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
 setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
