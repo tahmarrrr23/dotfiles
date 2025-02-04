@@ -36,7 +36,6 @@
   "path-intellisense.absolutePathToWorkspace": false,
   "path-intellisense.showHiddenFiles": true,
   "python.analysis.autoImportCompletions": true,
-  "python.analysis.diagnosticMode": "workspace",
   "python.analysis.importFormat": "relative",
   "python.analysis.typeCheckingMode": "off",
   "window.commandCenter": false,
