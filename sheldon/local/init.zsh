@@ -24,6 +24,10 @@ if command -v eza > /dev/null 2>&1; then
   alias la="eza -la --icons"
 fi
 
+if command -v docker > /dev/null 2>&1; then
+  source <(docker completion zsh)
+fi
+
 if command -v starship > /dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
