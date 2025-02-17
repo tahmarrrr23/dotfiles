@@ -1,6 +1,4 @@
 {
-  "GitCommitPlugin.MaxSubjectCharacters": 30,
-  "GitCommitPlugin.ShowEmoji": false,
   "breadcrumbs.enabled": false,
   "catppuccin-icons.hidesExplorerArrows": true,
   "diffEditor.renderSideBySide": false,
@@ -31,6 +29,8 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.mergeEditor": true,
+  "GitCommitPlugin.MaxSubjectCharacters": 50,
+  "GitCommitPlugin.ShowEmoji": false,
   "html.autoClosingTags": true,
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "path-intellisense.absolutePathToWorkspace": false,
