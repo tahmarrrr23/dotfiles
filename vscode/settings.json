@@ -40,7 +40,6 @@
   "python.analysis.importFormat": "relative",
   "python.analysis.typeCheckingMode": "off",
   "redhat.telemetry.enabled": false,
-  "window.commandCenter": false,
   "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.iconTheme": "catppuccin-frappe",
   "workbench.layoutControl.enabled": false,
