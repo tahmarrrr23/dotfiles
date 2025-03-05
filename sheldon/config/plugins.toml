@@ -13,4 +13,4 @@ use = ['init.zsh']
 
 [plugins.local]
 local = "~/.config/sheldon/local"
-use = ["{init,path,alias,history,completion}.zsh"]
+use = ["{init,path,alias,history}.zsh"]
