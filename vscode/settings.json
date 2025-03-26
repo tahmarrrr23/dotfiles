@@ -4,6 +4,7 @@
   "diffEditor.renderSideBySide": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.codeLens": false,
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "explicit",
