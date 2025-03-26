@@ -16,6 +16,7 @@ macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = transparent
 mouse-hide-while-typing = true
 quick-terminal-animation-duration = 0.1
+quick-terminal-autohide = "false"
 quick-terminal-position = "bottom"
 quick-terminal-screen = "main"
 scrollback-limit = 100000000
