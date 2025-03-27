@@ -27,12 +27,12 @@ configure() {
 
   mkdir -p "$HOME/.config"
 
-  ln -s -f "$root_path/zsh/zshrc" "$HOME/.zshrc"
-  ln -s -f "$root_path/zsh/zprofile" "$HOME/.zprofile"
-  ln -s -f "$root_path/sheldon" "$HOME/.config/sheldon"
-  ln -s -f "$root_path/starship/starship.toml" "$HOME/.config/starship.toml"
-  ln -s -f "$root_path/ghostty" "$HOME/.config/ghostty"
-  ln -s -f "$root_path/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+  ln -fns "$root_path/zsh/zshrc" "$HOME/.zshrc"
+  ln -fns "$root_path/zsh/zprofile" "$HOME/.zprofile"
+  ln -fns "$root_path/sheldon" "$HOME/.config/sheldon"
+  ln -fns "$root_path/starship/starship.toml" "$HOME/.config/starship.toml"
+  ln -fns "$root_path/ghostty" "$HOME/.config/ghostty"
+  ln -fns "$root_path/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 }
 
 backup() {
