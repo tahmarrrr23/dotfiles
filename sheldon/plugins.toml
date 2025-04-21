@@ -1,16 +1,17 @@
 shell = "zsh"
 
-[plugins.syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
 
-[plugins.autosuggestions]
+[plugins.zsh-ssh]
+github = "sunlei/zsh-ssh"
+
+[plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-[plugins.completion]
-github = "sorin-ionescu/prezto"
-dir = "modules/completion"
-use = ['init.zsh']
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
 
 [plugins.local]
 local = "~/.config/sheldon/local"
-use = ["{init,path,alias,history}.zsh"]
+use = ["*.zsh"]
