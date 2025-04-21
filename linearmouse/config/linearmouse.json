@@ -1,0 +1,33 @@
+{
+  "$schema": "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes": [
+    {
+      "scrolling": {
+        "reverse": {
+          "vertical": true
+        },
+        "distance": {
+          "vertical": 5
+        },
+        "speed": {
+          "vertical": 0
+        },
+        "acceleration": {
+          "vertical": 1
+        }
+      },
+      "pointer": {
+        "acceleration": 0.7,
+        "disableAcceleration": true
+      },
+      "if": {
+        "device": {
+          "vendorID": "0x1532",
+          "category": "mouse",
+          "productID": "0xc1",
+          "productName": "Razer Viper V3 Pro"
+        }
+      }
+    }
+  ]
+}
