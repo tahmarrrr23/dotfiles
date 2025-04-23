@@ -1,25 +1,44 @@
+# General
+initial-window = false
+scrollback-limit = 4294967295
+auto-update = check
+term = xterm-256color
+
+# Theme
+theme = tokyonight-storm
+
+# Font
+font-family = Juisee NF
+font-size = 14
+font-thicken = true
+adjust-cell-height = 3
+
+# Cursor
+cursor-opacity = 0.3
+cursor-style = block
+cursor-style-blink = true
+shell-integration-features = no-cursor
+
+# Window
 background-blur-radius = 10
-background-opacity = 0.85
+background-opacity = 0.8
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = tabs
+window-padding-balance = false
+window-padding-x = 20
+window-padding-y = 10
+
+# Clipboard
 clipboard-paste-bracketed-safe = true
 clipboard-paste-protection = true
 clipboard-read = allow
 clipboard-trim-trailing-spaces = true
 clipboard-write = allow
 copy-on-select = false
-cursor-opacity = 0.5
-cursor-style = bar
-font-family = "Moralerspace Neon NF"
-font-size = 16
-initial-window = false
+
+# Quick Terminal
 keybind = "global:cmd+shift+space=toggle_quick_terminal"
-macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = transparent
-mouse-hide-while-typing = true
-quick-terminal-animation-duration = 0.1
-quick-terminal-autohide = "false"
-quick-terminal-position = "bottom"
-quick-terminal-screen = "main"
-scrollback-limit = 100000000
-theme = catppuccin-frappe
-window-padding-x = 10
-window-padding-y = 10,0
+quick-terminal-animation-duration = 0
+quick-terminal-autohide = false
+quick-terminal-position = bottom
+quick-terminal-screen = main
