@@ -5,3 +5,4 @@ cd "$(dirname "$0")"
 
 mkdir -p "$HOME"/.config/ghostty
 ln -nfs "$PWD/config/config" "$HOME/.config/ghostty/config"
+ln -nfs "$PWD/config/themes" "$HOME/.config/ghostty/themes"

@@ -5,16 +5,16 @@ auto-update = check
 term = xterm-256color
 
 # Theme
-theme = tokyonight-storm
+theme = noctis
 
 # Font
-font-family = Juisee NF
+font-family = Moralerspace Neon NF
 font-size = 14
 font-thicken = true
 adjust-cell-height = 3
 
 # Cursor
-cursor-opacity = 0.3
+cursor-opacity = 0.1
 cursor-style = block
 cursor-style-blink = true
 shell-integration-features = no-cursor
