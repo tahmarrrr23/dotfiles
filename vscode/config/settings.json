@@ -30,7 +30,7 @@
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "explicit",
   "editor.dragAndDrop": false,
-  "editor.fontFamily": "Juisee",
+  "editor.fontFamily": "Moralerspace Neon",
   "editor.fontSize": 16,
   "editor.guides.bracketPairs": "active",
   "editor.linkedEditing": true,
@@ -39,6 +39,9 @@
   "editor.renderWhitespace": "boundary",
   "files.insertFinalNewline": true,
   "html.autoClosingTags": true,
+
+  // git
+  "git.confirmSync": false,
 
   // extensions
   "extensions.ignoreRecommendations": true,
