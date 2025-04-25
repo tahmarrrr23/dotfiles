@@ -1,40 +1,51 @@
 {
+  // general
+  "workbench.startupEditor": "none",
+
+  // theme
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.colorTheme": "Noctis",
+
+  // appearance
   "breadcrumbs.enabled": false,
-  "catppuccin-icons.hidesExplorerArrows": true,
-  "diffEditor.renderSideBySide": false,
+  "window.commandCenter": false,
+  "window.title": "",
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
+
+  // explorer
+  "explorer.compactFolders": false,
+  "explorer.incrementalNaming": "smart",
+  "files.autoGuessEncoding": true,
+  "workbench.tree.indent": 16,
+
+  // editor
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.codeLens": false,
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "explicit",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.dragAndDrop": false,
-  "editor.fontFamily": "Moralerspace Neon NF",
+  "editor.fontFamily": "Juisee",
   "editor.fontSize": 16,
   "editor.guides.bracketPairs": "active",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-  "explorer.compactFolders": false,
-  "explorer.incrementalNaming": "smart",
-  "extensions.ignoreRecommendations": true,
-  "files.autoGuessEncoding": true,
-  "files.exclude": {
-    "**/__pycache__": true
-  },
   "files.insertFinalNewline": true,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.mergeEditor": true,
-  "GitCommitPlugin.MaxSubjectCharacters": 50,
+  "html.autoClosingTags": true,
+
+  // extensions
+  "extensions.ignoreRecommendations": true,
   "GitCommitPlugin.ShowEmoji": false,
   "github.copilot.chat.localeOverride": "ja",
   "gitlens.plusFeatures.enabled": false,
-  "html.autoClosingTags": true,
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "path-intellisense.absolutePathToWorkspace": false,
   "path-intellisense.showHiddenFiles": true,
@@ -42,11 +53,12 @@
   "python.analysis.importFormat": "relative",
   "python.analysis.typeCheckingMode": "off",
   "redhat.telemetry.enabled": false,
-  "workbench.colorTheme": "Catppuccin Frappé",
-  "workbench.iconTheme": "catppuccin-frappe",
-  "workbench.layoutControl.enabled": false,
-  "workbench.navigationControl.enabled": false,
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.startupEditor": "none",
-  "workbench.tree.indent": 16
+
+  // languages
+  "[markdown][jsonc][json][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  }
 }
