@@ -7,7 +7,7 @@
   "material-icon-theme.hidesExplorerArrows": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "material-product-icons",
-  "workbench.colorTheme": "Noctis",
+  "workbench.colorTheme": "Noctis Obscuro",
 
   // appearance
   "breadcrumbs.enabled": false,
