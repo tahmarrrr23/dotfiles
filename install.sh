@@ -30,7 +30,6 @@ ln -nfs "$PWD/wezterm/wezterm.lua" "$HOME/.config/wezterm/wezterm.lua"
 # ghostty
 mkdir -p "$HOME"/.config/ghostty
 ln -nfs "$PWD/ghostty/config" "$HOME/.config/ghostty/config"
-ln -nfs "$PWD/ghostty/themes" "$HOME/.config/ghostty/themes"
 
 # linearmouse
 mkdir -p "$HOME"/.config/linearmouse
