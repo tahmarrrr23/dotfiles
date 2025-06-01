@@ -5,13 +5,13 @@ auto-update = check
 term = xterm-256color
 
 # Theme
-theme = noctis
+theme = SynthwaveAlpha
 
 # Font
 font-family = Juisee NF
 font-size = 14
 font-thicken = true
-adjust-cell-height = 3
+adjust-cell-height = 5
 
 # Cursor
 cursor-opacity = 0.1
