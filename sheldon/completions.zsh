@@ -12,6 +12,6 @@ if command -v uv &> /dev/null; then
   source <(uv generate-shell-completion zsh)
 fi
 
-if command -v pnpm &> /dev/null; then
-  source <(pnpm completion zsh)
-fi
+# if command -v pnpm &> /dev/null; then
+#   source <(pnpm completion zsh)
+# fi
