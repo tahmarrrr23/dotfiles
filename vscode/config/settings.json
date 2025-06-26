@@ -42,6 +42,7 @@
 
   // git
   "git.confirmSync": false,
+  "git.autofetch": true,
 
   // extensions
   "extensions.ignoreRecommendations": true,
