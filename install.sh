@@ -34,3 +34,7 @@ ln -nfs "$PWD/ghostty/config" "$HOME/.config/ghostty/config"
 # linearmouse
 mkdir -p "$HOME"/.config/linearmouse
 ln -fns "$PWD/linearmouse/linearmouse.json" "$HOME/.config/linearmouse/linearmouse.json"
+
+# mise
+mkdir -p "$HOME"/.config/mise
+ln -nfs "$PWD/mise/config.toml" "$HOME/.config/mise/config.toml"
