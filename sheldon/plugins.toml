@@ -1,5 +1,8 @@
 shell = "zsh"
 
+[plugins.xdg]
+local = "~/.config/sheldon"
+
 [plugins.homebrew]
 local = "~/.config/sheldon/homebrew"
 
