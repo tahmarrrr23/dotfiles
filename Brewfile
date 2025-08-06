@@ -1,5 +1,6 @@
 brew "ansible"
 brew "ansible-lint"
+brew "btop"
 brew "coreutils"
 brew "curl"
 brew "eza"
