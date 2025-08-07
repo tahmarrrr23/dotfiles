@@ -25,6 +25,7 @@ install() {
 
 configure() {
   brew bundle --file="$root_path/vscode/Brewfile"
+  ln -fns "$root_path/btop" "$HOME/.config/btop"
   ln -fns "$root_path/mise" "$HOME/.config/mise"
   ln -fns "$root_path/sheldon" "$HOME/.config/sheldon"
   ln -fns "$root_path/ghostty" "$HOME/.config/ghostty"
