@@ -68,5 +68,10 @@
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[javascript][javascriptreact][typescript][typescriptreact][scss][css]": {
+    "editor.quickSuggestions": {
+      "strings": "on"
+    }
   }
 }
