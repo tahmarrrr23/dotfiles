@@ -5,7 +5,7 @@ auto-update = check
 term = xterm-256color
 
 # Theme
-theme = SynthwaveAlpha
+theme = Synthwave Alpha
 
 # Font
 font-family = Juisee NF
