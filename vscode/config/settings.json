@@ -45,6 +45,7 @@
   "git.autofetch": true,
 
   // extensions
+  "ansible.python.interpreterPath": "/opt/homebrew/bin/python3",
   "extensions.ignoreRecommendations": true,
   "GitCommitPlugin.ShowEmoji": false,
   "github.copilot.chat.localeOverride": "ja",
