@@ -1,1 +1,3 @@
-Don't forget to install [Homebrew](https://brew.sh/).
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/tahmarrrr23/dotfiles/HEAD/bootstrap.sh)"
+```
