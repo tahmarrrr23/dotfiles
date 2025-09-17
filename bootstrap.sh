@@ -1,22 +1,29 @@
-#!/bin/sh
+#!/bin/bash
 
-set -eu
+set -u
 
-if [ ! -d "/Library/Apple/usr/share/rosetta" ]; then
-  softwareupdate --install-rosetta --agree-to-license
-else
-  echo "rosetta 2 already installed"
-fi
-
-if [ ! -d "/opt/homebrew" ]; then
+if [ ! -f "/opt/homebrew/bin/brew" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-else
-  echo "homebrew already installed"
 fi
 
-/opt/homebrew/bin/brew install --formula \
-  git
+echo "eval \"\$(/opt/homebrew/bin/brew shellenv)\"" > "$HOME/.zprofile"
 
-/opt/homebrew/bin/brew install --cask \
-  rectangle \
-  scroll-reverser
+localized_dirs=(
+  "$HOME/Applications"
+  "$HOME/Documents"
+  "$HOME/Downloads"
+  "$HOME/Desktop"
+  "$HOME/Public"
+  "$HOME/Pictures"
+  "$HOME/Music"
+  "$HOME/Movies"
+  "$HOME/Library"
+  "/Applications"
+)
+
+for dir in "${localized_dirs[@]}"; do
+  localized_file="$dir/.localized"
+  if [ -e "$localized_file" ]; then
+    rm "$localized_file"
+  fi
+done
