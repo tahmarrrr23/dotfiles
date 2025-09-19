@@ -50,7 +50,6 @@
   "GitCommitPlugin.ShowEmoji": false,
   "github.copilot.chat.localeOverride": "ja",
   "github.copilot.nextEditSuggestions.enabled": true,
-  "gitlens.plusFeatures.enabled": false,
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "path-intellisense.absolutePathToWorkspace": false,
