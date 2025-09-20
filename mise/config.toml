@@ -1,7 +1,5 @@
 [tools]
-java = "openjdk-17"
 node = "22"
 pnpm = "9"
 python = "3.10"
 uv = "latest"
-yarn = "1"
