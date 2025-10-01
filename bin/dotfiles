@@ -20,7 +20,6 @@ install() {
     chsh -s $zsh_bin
   fi
   ln -fns "$root_path/zsh/zshrc" "$HOME/.zshrc"
-  ln -fns "$root_path/zsh/zprofile" "$HOME/.zprofile"
 }
 
 configure() {
