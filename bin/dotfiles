@@ -1,7 +1,9 @@
-#!/bin/bash -pu
+#!/bin/bash
 
 set -eu
-cd "$(dirname "$0")/.."
+
+DOTFILES_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+DOTFILES_SRC_ROOT="$DOTFILES_ROOT/src"
 
 if [ -f "/opt/homebrew/bin/brew" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -10,10 +12,20 @@ else
   exit 1
 fi
 
-root_path=$PWD
+link_config() {
+  local src=$1 dst=$2
+  rm -rf "$dst"
+  ln -sfn "$src" "$dst"
+}
 
-install() {
-  brew bundle --file="$root_path/homebrew/Brewfile"
+# install homebrew packages
+brew bundle --file="$DOTFILES_SRC_ROOT/homebrew/Brewfile"
+
+# install vscode extensions
+brew bundle --file="$DOTFILES_SRC_ROOT/vscode/Brewfile"
+
+# configure zsh
+[ -d "$HOMEBREW_CELLAR/zsh" ] && {
   zsh_bin=$(brew --prefix)/bin/zsh
   if ! fgrep -q $zsh_bin /etc/shells; then
     echo $zsh_bin | sudo tee -a /etc/shells
@@ -22,33 +34,10 @@ install() {
   ln -fns "$root_path/zsh/zshrc" "$HOME/.zshrc"
 }
 
-configure() {
-  brew bundle --file="$root_path/vscode/Brewfile"
-  ln -fns "$root_path/btop" "$HOME/.config/btop"
-  ln -fns "$root_path/mise" "$HOME/.config/mise"
-  ln -fns "$root_path/sheldon" "$HOME/.config/sheldon"
-  ln -fns "$root_path/ghostty" "$HOME/.config/ghostty"
-  ln -fns "$root_path/starship" "$HOME/.config/starship"
-  ln -fns "$root_path/linearmouse" "$HOME/.config/linearmouse"
-  ln -fns "$root_path/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-}
-
-backup() {
-  brew bundle dump -f --file="$root_path"/homebrew/Brewfile --no-vscode 
-  brew bundle dump -f --file="$root_path"/vscode/Brewfile --vscode
-}
-
-case "$1" in
-  install)
-    install
-    ;;
-  configure)
-    configure
-    ;;
-  backup)
-    backup
-    ;;
-  *)
-    echo "Usage: $0 {install|configure|backup}"
-    ;;
-esac
+# configure other apps
+mkdir -p "$HOME/.config"
+link_config "$DOTFILES_SRC_ROOT/btop" "$HOME/.config/btop"
+link_config "$DOTFILES_SRC_ROOT/linearmouse" "$HOME/.config/linearmouse"
+link_config "$DOTFILES_SRC_ROOT/mise" "$HOME/.config/mise"
+link_config "$DOTFILES_SRC_ROOT/starship" "$HOME/.config/starship"
+link_config "$DOTFILES_SRC_ROOT/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
