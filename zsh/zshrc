@@ -1,1 +1,14 @@
-command -v sheldon > /dev/null 2>&1 && eval "$(/opt/homebrew/bin/sheldon source)"
+# must alias
+alias reload=". $HOME/.zshrc"
+
+# enable XDG
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_RUNTIME_DIR="/run/user/$UID"
+
+# let's sheldon !
+if command -v sheldon >/dev/null 2>&1; then
+  eval "$(sheldon source)"
+fi

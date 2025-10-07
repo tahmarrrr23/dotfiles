@@ -1,0 +1,7 @@
+show_preview = true
+enter_accept = false
+history_filter = ["^reload$", "^innocuous-cmd .*--secret=.+"]
+store_failed = false
+
+[sync]
+records = true

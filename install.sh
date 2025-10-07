@@ -38,3 +38,7 @@ ln -fns "$PWD/linearmouse/linearmouse.json" "$HOME/.config/linearmouse/linearmou
 # mise
 mkdir -p "$HOME"/.config/mise
 ln -nfs "$PWD/mise/config.toml" "$HOME/.config/mise/config.toml"
+
+# atuin
+mkdir -p "$HOME"/.config/atuin
+ln -nfs "$PWD/atuin/config.toml" "$HOME/.config/atuin/config.toml"
