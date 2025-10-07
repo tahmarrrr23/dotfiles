@@ -1,8 +1,9 @@
-#!/bin/sh
-set -eu
+#!/usr/bin/env bash
 
-DOTFILES_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-DOTFILES_SRC_ROOT="$DOTFILES_ROOT/src"
+set -e
+
+root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+src_directory="$root_directory/src"
 
 link_config() {
   local src=$1 dst=$2
@@ -29,6 +30,7 @@ change_shell() {
   fi
 }
 
+printf "Configure zsh as default shell\n"
 target_shell="$HOMEBREW_PREFIX/bin/zsh"
 if [ -x "$target_shell" ]; then
   add_shell "$target_shell"
@@ -38,12 +40,12 @@ else
   change_shell "/bin/zsh"
 fi
 
-# configure
+printf "Configure\n"
 mkdir -p "$HOME/.config"
-link_config "$DOTFILES_SRC_ROOT/atuin" "$HOME/.config/atuin"
-link_config "$DOTFILES_SRC_ROOT/linearmouse" "$HOME/.config/linearmouse"
-link_config "$DOTFILES_SRC_ROOT/mise" "$HOME/.config/mise"
-link_config "$DOTFILES_SRC_ROOT/rio" "$HOME/.config/rio"
-link_config "$DOTFILES_SRC_ROOT/sheldon" "$HOME/.config/sheldon"
-link_config "$DOTFILES_SRC_ROOT/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-link_config "$DOTFILES_SRC_ROOT/zsh/zshrc" "$HOME/.zshrc"
+link_config "$src_directory/atuin" "$HOME/.config/atuin"
+link_config "$src_directory/linearmouse" "$HOME/.config/linearmouse"
+link_config "$src_directory/mise" "$HOME/.config/mise"
+link_config "$src_directory/rio" "$HOME/.config/rio"
+link_config "$src_directory/sheldon" "$HOME/.config/sheldon"
+link_config "$src_directory/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+link_config "$src_directory/zsh/zshrc" "$HOME/.zshrc"
