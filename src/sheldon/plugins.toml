@@ -1,25 +1,19 @@
 shell = "zsh"
 
-[plugins.xdg]
+[plugins.mise]
 local = "~/.config/sheldon"
 
-[plugins.homebrew]
-local = "~/.config/sheldon/homebrew"
+[plugins.eza]
+local = "~/.config/sheldon"
 
-[plugins.alias]
+[plugins.atuin]
+local = "~/.config/sheldon"
+
+[plugins.fzf]
 local = "~/.config/sheldon"
 
 [plugins.completions]
 local = "~/.config/sheldon"
-
-[plugins.history]
-local = "~/.config/sheldon"
-
-[plugins.fzf-tab]
-github = "Aloxaf/fzf-tab"
-
-[plugins.zsh-ssh]
-github = "sunlei/zsh-ssh"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
@@ -27,6 +21,8 @@ github = "zsh-users/zsh-autosuggestions"
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 
-[plugins.prompt]
-local = "~/.config/sheldon/prompt"
-use = ["*.zsh"]
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+
+[plugins.zsh-ssh]
+github = "sunlei/zsh-ssh"

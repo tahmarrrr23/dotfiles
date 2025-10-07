@@ -1,16 +1,8 @@
-#!/bin/bash
-
+#!/bin/sh
 set -eu
 
 DOTFILES_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DOTFILES_SRC_ROOT="$DOTFILES_ROOT/src"
-
-if [ -f "/opt/homebrew/bin/brew" ]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-  printf "Please install Homebrew\n"
-  exit 1
-fi
 
 link_config() {
   local src=$1 dst=$2
@@ -18,26 +10,39 @@ link_config() {
   ln -sfn "$src" "$dst"
 }
 
-# install homebrew packages
-brew bundle --file="$DOTFILES_SRC_ROOT/homebrew/Brewfile"
-
-# install vscode extensions
-brew bundle --file="$DOTFILES_SRC_ROOT/vscode/Brewfile"
-
-# configure zsh
-[ -d "$HOMEBREW_CELLAR/zsh" ] && {
-  zsh_bin=$(brew --prefix)/bin/zsh
-  if ! fgrep -q $zsh_bin /etc/shells; then
-    echo $zsh_bin | sudo tee -a /etc/shells
-    chsh -s $zsh_bin
+add_shell() {
+  if ! grep -qx "$1" /etc/shells; then
+    echo "$1" | sudo tee -a /etc/shells >/dev/null
   fi
-  ln -fns "$root_path/zsh/zshrc" "$HOME/.zshrc"
 }
 
-# configure other apps
+remove_shell() {
+  if grep -qx "$1" /etc/shells; then
+    sudo sed -i.bak "\|^$1$|d" /etc/shells
+  fi
+}
+
+change_shell() {
+  if [ "$SHELL" != "$1" ]; then
+    chsh -s "$1"
+    exec $1 -l
+  fi
+}
+
+target_shell="$HOMEBREW_PREFIX/bin/zsh"
+if [ -x "$target_shell" ]; then
+  add_shell "$target_shell"
+  change_shell "$target_shell"
+else
+  remove_shell "$target_shell"
+  change_shell "/bin/zsh"
+fi
+
+# configure
 mkdir -p "$HOME/.config"
-link_config "$DOTFILES_SRC_ROOT/btop" "$HOME/.config/btop"
+link_config "$DOTFILES_SRC_ROOT/atuin" "$HOME/.config/atuin"
 link_config "$DOTFILES_SRC_ROOT/linearmouse" "$HOME/.config/linearmouse"
 link_config "$DOTFILES_SRC_ROOT/mise" "$HOME/.config/mise"
-link_config "$DOTFILES_SRC_ROOT/starship" "$HOME/.config/starship"
+link_config "$DOTFILES_SRC_ROOT/sheldon" "$HOME/.config/sheldon"
 link_config "$DOTFILES_SRC_ROOT/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+link_config "$DOTFILES_SRC_ROOT/zsh/zshrc" "$HOME/.zshrc"
