@@ -1,16 +1,5 @@
-[ -d "$HOMEBREW_CELLAR/fzf" ] || return
+if ! command -v fzf >/dev/null 2>&1; then
+  return
+fi
 
 source <(fzf --zsh)
-
-if [ -d "$HOMEBREW_CELLAR/ghq" ]; then
-  fzf-ghq() {
-    local src=$(ghq list | fzf)
-    if [ -n "$src" ]; then
-      BUFFER="cd $(ghq root)/$src"
-      zle accept-line
-    fi
-    zle -R -c
-  }
-  zle -N fzf-ghq
-  bindkey '^g' fzf-ghq
-fi

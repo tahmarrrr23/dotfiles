@@ -1,17 +1,4 @@
-autoload -U compinit && compinit
+autoload -U compinit
 
-if command -v docker &> /dev/null; then
-  source <(docker completion zsh)
-fi
-
-if command -v pip &> /dev/null; then
-  source <(pip completion --zsh)
-fi
-
-if command -v uv &> /dev/null; then
-  source <(uv generate-shell-completion zsh)
-fi
-
-# if command -v pnpm &> /dev/null; then
-#   source <(pnpm completion zsh)
-# fi
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
