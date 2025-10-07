@@ -1,7 +1,15 @@
-show_preview = true
 enter_accept = false
-history_filter = ["^reload$", "^innocuous-cmd .*--secret=.+"]
-store_failed = false
+history_filter = [
+    "cd",
+    "code",
+    "exit",
+    "history",
+    "la*",
+    "ll*",
+    "ls*",
+    "quit",
+    "reload",
+]
 
 [sync]
 records = true
