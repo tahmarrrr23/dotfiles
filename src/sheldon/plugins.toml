@@ -6,6 +6,9 @@ local = "~/.config/sheldon"
 [plugins.eza]
 local = "~/.config/sheldon"
 
+[plugins.fd]
+local = "~/.config/sheldon"
+
 [plugins.atuin]
 local = "~/.config/sheldon"
 
