@@ -9,17 +9,14 @@ local = "~/.config/sheldon"
 [plugins.atuin]
 local = "~/.config/sheldon"
 
-[plugins.fzf]
-local = "~/.config/sheldon"
-
 [plugins.completions]
 local = "~/.config/sheldon"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-[plugins.fast-syntax-highlighting]
-github = "zdharma-continuum/fast-syntax-highlighting"
+[plugins.F-Sy-H]
+github = "z-shell/F-Sy-H"
 
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
