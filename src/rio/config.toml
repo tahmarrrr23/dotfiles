@@ -1,0 +1,19 @@
+padding-x = 10
+theme = "synthwave"
+
+[window]
+opacity = 0.8
+blur = true
+decorations = "Transparent"
+
+[fonts]
+family = "Juisee NF"
+size = 14
+
+[cursor]
+shape = "block"
+blinking = true
+blinking-interval = 750
+
+[navigation]
+mode = "Bookmark"
