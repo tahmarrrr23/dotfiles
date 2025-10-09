@@ -1,15 +1,3 @@
 enter_accept = false
-history_filter = [
-    "cd",
-    "code",
-    "exit",
-    "history",
-    "la*",
-    "ll*",
-    "ls*",
-    "quit",
-    "reload",
-]
-
-[sync]
-records = true
+invert = true
+style = "full"
