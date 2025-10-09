@@ -1,19 +1,18 @@
 padding-x = 10
+padding-y = [10, 0]
 theme = "synthwave"
+line-height = 1.1
 
 [window]
 opacity = 0.8
+decorations = "Enabled"
 blur = true
-decorations = "Transparent"
 
 [fonts]
 family = "Juisee NF"
-size = 14
+size = 16
 
 [cursor]
-shape = "block"
+shape = "beam"
 blinking = true
 blinking-interval = 750
-
-[navigation]
-mode = "Bookmark"
