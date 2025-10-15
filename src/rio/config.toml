@@ -5,12 +5,12 @@ line-height = 1.1
 
 [window]
 opacity = 0.8
-decorations = "Enabled"
+decorations = "Transparent"
 blur = true
 
 [fonts]
 family = "Juisee NF"
-size = 16
+size = 15
 
 [cursor]
 shape = "beam"
