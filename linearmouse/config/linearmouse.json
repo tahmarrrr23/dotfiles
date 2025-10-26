@@ -1,31 +1,31 @@
 {
-  "$schema": "https:\/\/schema.linearmouse.app\/0.10.0",
+  "$schema": "https://schema.linearmouse.app/0.10.2",
   "schemes": [
     {
-      "scrolling": {
-        "reverse": {
-          "vertical": true
-        },
-        "distance": {
-          "vertical": 5
-        },
-        "speed": {
-          "vertical": 0
-        },
-        "acceleration": {
-          "vertical": 1
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x101b",
+          "productName": "ATK Mouse 8K Dongle",
+          "vendorID": "0x373b"
         }
       },
       "pointer": {
         "acceleration": 0.7,
         "disableAcceleration": true
       },
-      "if": {
-        "device": {
-          "vendorID": "0x1532",
-          "category": "mouse",
-          "productID": "0xc1",
-          "productName": "Razer Viper V3 Pro"
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
+        },
+        "distance": {
+          "vertical": 3
+        },
+        "reverse": {
+          "vertical": true
+        },
+        "speed": {
+          "vertical": 0
         }
       }
     }
