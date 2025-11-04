@@ -1,18 +1,21 @@
-padding-x = 10
-padding-y = [10, 0]
+padding-x = 20
+padding-y = [0, 0]
 theme = "synthwave_84"
-line-height = 1.1
 
 [window]
 opacity = 0.8
 decorations = "Transparent"
 blur = true
+macos-use-unified-titlebar = true
 
 [fonts]
 family = "Juisee NF"
-size = 15
+size = 14.0
 
 [cursor]
-shape = "beam"
+shape = "underline"
 blinking = true
 blinking-interval = 750
+
+[title]
+content = ""
