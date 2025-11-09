@@ -1,9 +1,8 @@
 padding-x = 20
-padding-y = [0, 0]
 theme = "synthwave_84"
 
 [window]
-opacity = 0.8
+opacity = 0.80
 decorations = "Transparent"
 blur = true
 macos-use-unified-titlebar = true
