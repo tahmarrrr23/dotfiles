@@ -1,22 +1,22 @@
 shell = "zsh"
 
 [plugins.mise]
-local = "~/.config/sheldon"
+local = "~/.config/zsh"
 
 [plugins.eza]
-local = "~/.config/sheldon"
+local = "~/.config/zsh"
 
 [plugins.fd]
-local = "~/.config/sheldon"
+local = "~/.config/zsh"
 
 [plugins.fzf]
-local = "~/.config/sheldon"
+local = "~/.config/zsh"
 
 [plugins.atuin]
-local = "~/.config/sheldon"
+local = "~/.config/zsh"
 
 [plugins.completions]
-local = "~/.config/sheldon"
+local = "~/.config/zsh"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
