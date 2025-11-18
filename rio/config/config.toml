@@ -1,4 +1,5 @@
 padding-x = 20
+padding-y = [20, 0]
 theme = "synthwave_84"
 
 [window]
