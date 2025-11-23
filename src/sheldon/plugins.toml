@@ -1,5 +1,8 @@
 shell = "zsh"
 
+[plugins.docker]
+local = "~/.config/zsh"
+
 [plugins.mise]
 local = "~/.config/zsh"
 
