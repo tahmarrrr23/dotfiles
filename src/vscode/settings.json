@@ -40,6 +40,9 @@
   "files.insertFinalNewline": true,
   "html.autoClosingTags": true,
 
+  // terminal
+  "terminal.integrated.stickyScroll.enabled": false,
+
   // git
   "git.confirmSync": false,
   "git.autofetch": true,
