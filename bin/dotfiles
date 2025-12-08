@@ -43,7 +43,6 @@ fi
 printf "Configure\n"
 mkdir -p "$HOME/.config"
 link_config "$src_directory/atuin" "$HOME/.config/atuin"
-link_config "$src_directory/ghostty" "$HOME/.config/ghostty"
 link_config "$src_directory/linearmouse" "$HOME/.config/linearmouse"
 link_config "$src_directory/mise" "$HOME/.config/mise"
 link_config "$src_directory/rio" "$HOME/.config/rio"
