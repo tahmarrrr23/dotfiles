@@ -61,6 +61,7 @@
   "python.analysis.autoImportCompletions": true,
   "python.analysis.importFormat": "relative",
   "python.analysis.typeCheckingMode": "off",
+  "python.terminal.activateEnvironment": false,
   "redhat.telemetry.enabled": false,
 
   // languages
