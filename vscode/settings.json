@@ -41,6 +41,7 @@
   "html.autoClosingTags": true,
 
   // terminal
+  "terminal.integrated.scrollback": 100000,
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.suggest.enabled": false,
 
