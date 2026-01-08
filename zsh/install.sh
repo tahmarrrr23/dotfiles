@@ -3,4 +3,5 @@ root_directory="$(cd "$(dirname "$0")/.." && pwd)"
 
 echo "-> [zsh] install zshrc..."
 
+rm -rf "$HOME/.zshrc"
 ln -sfn "$root_directory/zsh/config/zshrc" "$HOME/.zshrc"
