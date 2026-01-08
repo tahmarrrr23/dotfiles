@@ -1,17 +1,25 @@
 shell = "zsh"
 
-[plugins.local]
+[plugins.atuin]
 local = "~/.config/sheldon/local"
-use = ["*.zsh"]
+
+[plugins.eza]
+local = "~/.config/sheldon/local"
+
+[plugins.fzf]
+local = "~/.config/sheldon/local"
+
+[plugins.mise]
+local = "~/.config/sheldon/local"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-[plugins.F-Sy-H]
-github = "z-shell/F-Sy-H"
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+
+[plugins.completions]
+local = "~/.config/sheldon/local"
 
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
-
-[plugins.zsh-ssh]
-github = "sunlei/zsh-ssh"
