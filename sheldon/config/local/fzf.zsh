@@ -1,3 +1,7 @@
+if ! command -v fzf >/dev/null 2>&1; then
+  return
+fi
+
 if command -v ghq > /dev/null 2>&1 ; then
   function ghq-fzf() {
     local target_dir=$(ghq list -p | fzf --query="$LBUFFER")
