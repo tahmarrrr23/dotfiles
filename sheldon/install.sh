@@ -1,11 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 set -eu
-cd "$(dirname "$0")"
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-if [ ! -d "$HOME/.config/sheldon" ]; then
-  sheldon init --shell zsh
-fi
+root_directory="$(cd "$(dirname "$0")/.." && pwd)"
 
-ln -nfs "$PWD"/config/plugins.toml "$HOME"/.config/sheldon/plugins.toml
-ln -nfs "$PWD"/config/local "$HOME"/.config/sheldon/local
+echo "[sheldon] configure"
+
+rm -rf "$HOME/.config/sheldon"
+ln -sfn "$root_directory/sheldon/config" "$HOME/.config/sheldon"

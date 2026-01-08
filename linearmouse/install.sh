@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 set -eu
-cd "$(dirname "$0")"
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-mkdir -p "$HOME"/.config/linearmouse
-ln -fns "$PWD/config/linearmouse.json" "$HOME/.config/linearmouse/linearmouse.json"
+root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+
+echo "[linearmouse] configure"
+
+rm -rf "$HOME/.config/linearmouse"
+ln -sfn "$root_directory/linearmouse/config" "$HOME/.config/linearmouse"

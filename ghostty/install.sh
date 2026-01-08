@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 set -eu
-cd "$(dirname "$0")"
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-mkdir -p "$HOME"/.config/ghostty
-ln -nfs "$PWD/config/config" "$HOME/.config/ghostty/config"
+root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+
+echo "[ghostty] configure"
+
+rm -rf "$HOME/.config/ghostty"
+ln -sfn "$root_directory/ghostty/config" "$HOME/.config/ghostty"

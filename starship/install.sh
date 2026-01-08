@@ -1,6 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 set -eu
-cd "$(dirname "$0")"
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-ln -nfs "$PWD/config/starship.toml" "$HOME/.config/starship.toml"
+root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+
+echo "[starship] configure"
+
+rm -rf "$HOME/.config/starship.toml"
+ln -sfn "$root_directory/starship/config/starship.toml" "$HOME/.config/starship.toml"

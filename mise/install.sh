@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 set -eu
-cd "$(dirname "$0")"
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-mkdir -p "$HOME"/.config/mise
-ln -nfs "$PWD/config/config.toml" "$HOME/.config/mise/config.toml"
+root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+
+echo "[mise] configure"
+
+rm -rf "$HOME/.config/mise"
+ln -sfn "$root_directory/mise/config" "$HOME/.config/mise"

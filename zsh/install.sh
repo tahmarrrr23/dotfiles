@@ -1,10 +1,39 @@
-#!/bin/bash
+#!/bin/sh
 set -eu
-cd "$(dirname "$0")"
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname "$ZINIT_HOME")"
-[ ! -d "$ZINIT_HOME"/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+target_shell="/opt/homebrew/bin/zsh"
 
-ln -nfs "$PWD/config/zshrc" "$HOME/.zshrc"
+add_shell() {
+  if ! grep -qx "$1" /etc/shells; then
+    echo "$1" | sudo tee -a /etc/shells >/dev/null
+  fi
+}
+
+remove_shell() {
+  if grep -qx "$1" /etc/shells; then
+    sudo sed -i.bak "\|^$1$|d" /etc/shells
+  fi
+}
+
+change_shell() {
+  if [ "$SHELL" != "$1" ]; then
+    chsh -s "$1"
+    exec $1 -l
+  fi
+}
+
+echo "[zsh] install"
+
+if [ -x "$target_shell" ]; then
+  add_shell "$target_shell"
+  change_shell "$target_shell"
+else
+  remove_shell "$target_shell"
+  change_shell "/bin/zsh"
+fi
+
+echo "[zsh] configure"
+
+rm -rf "$HOME/.zshrc"
+ln -sfn "$root_directory/zsh/config/zshrc" "$HOME/.zshrc"
