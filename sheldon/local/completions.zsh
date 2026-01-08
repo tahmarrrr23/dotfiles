@@ -1,4 +1,0 @@
-autoload -U compinit
-
-compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
-zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache

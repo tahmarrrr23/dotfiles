@@ -18,8 +18,5 @@ github = "zsh-users/zsh-autosuggestions"
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 
-[plugins.completions]
-local = "~/.config/sheldon/local"
-
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
