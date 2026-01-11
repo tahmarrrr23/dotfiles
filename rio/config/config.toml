@@ -1,0 +1,11 @@
+padding-x = 20
+padding-y = [20, 0]
+
+[fonts]
+size = 14.0
+family = "UDEV Gothic 35NF"
+
+[window]
+opacity = 0.8
+blur = true
+decorations = "Transparent"
