@@ -1,21 +1,16 @@
 padding-x = 20
 padding-y = [20, 0]
-theme = "synthwave_84"
-
-[window]
-opacity = 0.80
-decorations = "Transparent"
-blur = true
-macos-use-unified-titlebar = true
 
 [fonts]
-family = "Juisee NF"
 size = 14.0
+family = "UDEV Gothic 35NF"
+
+[window]
+opacity = 0.8
+blur = true
+decorations = "Disabled"
 
 [cursor]
 shape = "underline"
 blinking = true
 blinking-interval = 750
-
-[title]
-content = ""
