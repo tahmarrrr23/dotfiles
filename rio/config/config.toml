@@ -8,4 +8,9 @@ family = "UDEV Gothic 35NF"
 [window]
 opacity = 0.8
 blur = true
-decorations = "Transparent"
+decorations = "Disabled"
+
+[cursor]
+shape = "underline"
+blinking = true
+blinking-interval = 750
