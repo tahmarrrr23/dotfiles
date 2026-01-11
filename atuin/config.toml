@@ -1,3 +1,4 @@
 enter_accept = false
 history_filter = ["^cd", "^code", "^la", "^ll", "^ls", "^reload$"]
 style = "full"
+invert = true
