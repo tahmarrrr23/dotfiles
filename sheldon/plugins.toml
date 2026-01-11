@@ -20,3 +20,7 @@ github = "zsh-users/zsh-syntax-highlighting"
 
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
+
+[plugins.pure]
+github = "sindresorhus/pure"
+use = ["async.zsh", "pure.zsh"]
