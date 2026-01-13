@@ -1,0 +1,84 @@
+{
+  // editor
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.codeLens": false,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.dragAndDrop": false,
+  "editor.guides.bracketPairs": "active",
+  "editor.linkedEditing": true,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "all",
+  "editor.smoothScrolling": true,
+
+  // editor - cursor
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "explicit",
+
+  // editor - font
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'UDEV Gothic 35NF', Menlo, Monaco, 'Courier New', monospace",
+
+  // editor - minimap
+  "editor.minimap.enabled": false,
+
+  // editor - files
+  "files.insertFinalNewline": true,
+
+  // workbench
+  "workbench.layoutControl.enabled": false,
+  "workbench.list.smoothScrolling": true,
+  "workbench.navigationControl.enabled": false,
+  "workbench.startupEditor": "none",
+
+  // workbench - appearance
+  "workbench.tree.indent": 20,
+
+  // workbench - breadcrumbs
+  "breadcrumbs.enabled": false,
+
+  // window
+  "window.commandCenter": false,
+
+  // features - explorer
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
+  "explorer.sortOrderLexicographicOptions": "unicode",
+
+  // features - terminal
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 4,
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.scrollback": 100000,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.suggest.enabled": false,
+
+  // features - chat
+  "chat.commandCenter.enabled": false,
+
+  // extensions
+  "extensions.ignoreRecommendations": true,
+  "github.copilot.chat.localeOverride": "ja",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "path-intellisense.absolutePathToWorkspace": false,
+  "path-intellisense.showHiddenFiles": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.terminal.activateEnvironment": false,
+
+  // languages
+  "[json][jsonc][jsonl]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[typescript][typescriptreact]": {
+    "editor.quickSuggestions": {
+      "strings": "on"
+    }
+  }
+}
