@@ -42,7 +42,6 @@
 
   // features - explorer
   "explorer.compactFolders": false,
-  "explorer.sortOrder": "type",
   "explorer.sortOrderLexicographicOptions": "unicode",
 
   // features - terminal
@@ -70,9 +69,6 @@
   "python.terminal.activateEnvironment": false,
 
   // languages
-  "[json][jsonc][jsonl]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
