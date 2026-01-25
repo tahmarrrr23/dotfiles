@@ -4,14 +4,10 @@ scrollback-limit = 4294967295
 auto-update = check
 term = xterm-256color
 
-# Theme
-theme = Synthwave Alpha
-
 # Font
-font-family = Juisee NF
+font-family = UDEV Gothic 35NF
 font-size = 14
 font-thicken = true
-adjust-cell-height = 5
 
 # Cursor
 cursor-opacity = 0.1
@@ -26,7 +22,7 @@ macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = tabs
 window-padding-balance = false
 window-padding-x = 20
-window-padding-y = 10
+window-padding-y = 20
 
 # Clipboard
 clipboard-paste-bracketed-safe = true
