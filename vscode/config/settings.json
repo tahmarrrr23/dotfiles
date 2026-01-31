@@ -33,6 +33,7 @@
   "workbench.startupEditor": "none",
 
   // workbench - appearance
+  "workbench.iconTheme": "bearded-icons",
   "workbench.tree.indent": 20,
 
   // workbench - breadcrumbs
