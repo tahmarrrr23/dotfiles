@@ -63,7 +63,7 @@
   "extensions.ignoreRecommendations": true,
   "github.copilot.chat.localeOverride": "ja",
   "github.copilot.nextEditSuggestions.enabled": true,
-  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
   "path-intellisense.absolutePathToWorkspace": false,
   "path-intellisense.showHiddenFiles": true,
   "python.analysis.autoImportCompletions": true,
