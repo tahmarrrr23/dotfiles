@@ -4,6 +4,7 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.codeLens": false,
   "editor.copyWithSyntaxHighlighting": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.dragAndDrop": false,
   "editor.guides.bracketPairs": "active",
   "editor.linkedEditing": true,
@@ -71,10 +72,5 @@
   // languages
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-  },
-  "[typescript][typescriptreact]": {
-    "editor.quickSuggestions": {
-      "strings": "on"
-    }
   }
 }
