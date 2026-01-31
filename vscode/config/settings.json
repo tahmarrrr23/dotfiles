@@ -61,6 +61,7 @@
 
   // extensions
   "extensions.ignoreRecommendations": true,
+  "git-graph.date.format": "ISO Date & Time",
   "github.copilot.chat.localeOverride": "ja",
   "github.copilot.nextEditSuggestions.enabled": true,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
