@@ -1,35 +1,35 @@
 #!/bin/bash
 set -eu
 
-echo "[bootstrap] install homebrew"
+log() { printf "\033[1;34m==>\033[0m \033[1m%s\033[0m\n" "$1"; }
+ok() { printf "  \033[32m✔\033[0m %s\n" "$1"; }
+skip() { printf "  \033[33m-\033[0m %s\n" "$1"; }
 
-if [ ! -f "/opt/homebrew/bin/brew" ]; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+log "Install Homebrew"
+
+if [[ -f /opt/homebrew/bin/brew ]]; then
+	skip "already installed"
 else
-  echo "-> already installed"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	ok "installed"
 fi
 
-echo "eval \"\$(/opt/homebrew/bin/brew shellenv)\"" > "$HOME/.zprofile"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >"$HOME/.zprofile"
 
-echo "[bootstrap] remove .localized files"
+log "Remove .localized files"
 
-localized_dirs=(
-  "$HOME/Applications"
-  "$HOME/Documents"
-  "$HOME/Downloads"
-  "$HOME/Desktop"
-  "$HOME/Public"
-  "$HOME/Pictures"
-  "$HOME/Music"
-  "$HOME/Movies"
-  "$HOME/Library"
-  "/Applications"
+local -a dirs
+dirs=(
+	"$HOME"/{Applications,Documents,Downloads,Desktop,Public,Pictures,Music,Movies,Library}
+	/Applications
 )
 
-for dir in "${localized_dirs[@]}"; do
-  localized_file="$dir/.localized"
-  echo "-> removing $localized_file"
-  if [ -e "$localized_file" ]; then
-    rm -rf "$localized_file"
-  fi
+for dir in "${dirs[@]}"; do
+	local target="$dir/.localized"
+	if [[ -e "$target" ]]; then
+		rm -f "$target"
+		ok "removed $target"
+	else
+		skip "not found $target"
+	fi
 done
