@@ -8,10 +8,10 @@ skip() { printf "  \033[33m-\033[0m %s\n" "$1"; }
 log "Install Homebrew"
 
 if [[ -f /opt/homebrew/bin/brew ]]; then
-	skip "already installed"
+  skip "already installed"
 else
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	ok "installed"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ok "installed"
 fi
 
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >"$HOME/.zprofile"
@@ -20,25 +20,25 @@ log "Remove .localized files"
 
 declare -a dirs
 dirs=(
-	"$HOME"/{Applications,Documents,Downloads,Desktop,Public,Pictures,Music,Movies,Library}
-	/Applications
+  "$HOME"/{Applications,Documents,Downloads,Desktop,Public,Pictures,Music,Movies,Library}
+  /Applications
 )
 
 for dir in "${dirs[@]}"; do
-	target="$dir/.localized"
-	if [[ -e "$target" ]]; then
-		rm -f "$target"
-		ok "removed $target"
-	else
-		skip "not found $target"
-	fi
+  target="$dir/.localized"
+  if [[ -e "$target" ]]; then
+    rm -f "$target"
+    ok "removed $target"
+  else
+    skip "not found $target"
+  fi
 done
 
 log "Create config directory"
 
 if [[ -d "$HOME/.config" ]]; then
-	skip "already exists"
+  skip "already exists"
 else
-	mkdir "$HOME/.config"
-	ok "created"
+  mkdir "$HOME/.config"
+  ok "created"
 fi
