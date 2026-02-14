@@ -8,7 +8,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 unset HISTFILE
 
 # reload alias
-alias reload=". $HOME/.zshrc"
+alias reload='exec $SHELL -l'
 
 # change completion cache location
 autoload -U compinit
