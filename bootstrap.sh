@@ -18,14 +18,14 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >"$HOME/.zprofile"
 
 log "Remove .localized files"
 
-local -a dirs
+declare -a dirs
 dirs=(
 	"$HOME"/{Applications,Documents,Downloads,Desktop,Public,Pictures,Music,Movies,Library}
 	/Applications
 )
 
 for dir in "${dirs[@]}"; do
-	local target="$dir/.localized"
+	target="$dir/.localized"
 	if [[ -e "$target" ]]; then
 		rm -f "$target"
 		ok "removed $target"
