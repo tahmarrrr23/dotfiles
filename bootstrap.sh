@@ -33,3 +33,12 @@ for dir in "${dirs[@]}"; do
 		skip "not found $target"
 	fi
 done
+
+log "Create config directory"
+
+if [[ -d "$HOME/.config" ]]; then
+	skip "already exists"
+else
+	mkdir "$HOME/.config"
+	ok "created"
+fi
