@@ -9,7 +9,9 @@ alias ll="ls -Gl"
 alias la="ls -Gla"
 
 unset HISTFILE
-autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+autoload -Uz compinit
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
 
 if [[ -x ${commands[sheldon]} ]] && [[ -d "$XDG_CONFIG_HOME/sheldon" ]]; then
