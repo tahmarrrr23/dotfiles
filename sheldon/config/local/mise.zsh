@@ -1,5 +1,3 @@
-if ! command -v mise >/dev/null 2>&1; then
-  return
-fi
+[[ ! -x ${commands[mise]} ]] && return
 
 eval "$(mise activate zsh)"

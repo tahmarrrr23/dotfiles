@@ -1,7 +1,5 @@
-if ! command -v eza >/dev/null 2>&1; then
-  return
-fi
+[[ ! -x ${commands[eza]} ]] && return
 
-alias ls="eza --group-directories-first --icons"
-alias ll="eza -lgb --time-style long-iso --group-directories-first --icons --sort=Name"
-alias la="eza -lgba --time-style long-iso --group-directories-first --icons --sort=Name"
+alias ls="eza --group-directories-first --icons --sort=Name"
+alias ll="eza --group-directories-first --icons --sort=Name -lgb --time-style long-iso"
+alias la="eza --group-directories-first --icons --sort=Name -lgba --time-style long-iso"

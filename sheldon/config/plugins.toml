@@ -6,20 +6,23 @@ local = "~/.config/sheldon/local"
 [plugins.eza]
 local = "~/.config/sheldon/local"
 
-[plugins.fzf]
+[plugins.ghq]
 local = "~/.config/sheldon/local"
 
 [plugins.mise]
 local = "~/.config/sheldon/local"
 
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+
+[plugins.fzf]
+local = "~/.config/sheldon/local"
+
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-[plugins.zsh-syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
-
-[plugins.fzf-tab]
-github = "Aloxaf/fzf-tab"
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
 
 [plugins.pure]
 github = "sindresorhus/pure"
