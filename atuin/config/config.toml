@@ -1,4 +1,9 @@
-enter_accept = false
-history_filter = ["^cd", "^code", "^la", "^ll", "^ls", "^reload$"]
 style = "full"
-invert = true
+history_filter = ["^cd", "^code", "^la", "^ll", "^ls", "^reload$"]
+enter_accept = false
+
+[sync]
+records = true
+
+[ui]
+columns = ["exit", "datetime", "command"]
