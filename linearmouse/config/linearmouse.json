@@ -1,31 +1,31 @@
 {
-  "$schema": "https://schema.linearmouse.app/0.10.2",
-  "schemes": [
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
+  "schemes" : [
     {
-      "if": {
-        "device": {
-          "category": "mouse",
-          "productID": "0x101b",
-          "productName": "ATK Mouse 8K Dongle",
-          "vendorID": "0x373b"
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x101b",
+          "productName" : "ATK Mouse 8K Dongle",
+          "vendorID" : "0x373b"
         }
       },
-      "pointer": {
-        "acceleration": 0.8,
-        "disableAcceleration": true
+      "pointer" : {
+        "acceleration" : 1,
+        "disableAcceleration" : true
       },
-      "scrolling": {
-        "acceleration": {
-          "vertical": 1
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
         },
-        "distance": {
-          "vertical": 5
+        "distance" : {
+          "vertical" : 4
         },
-        "reverse": {
-          "vertical": true
+        "reverse" : {
+          "vertical" : true
         },
-        "speed": {
-          "vertical": 0
+        "speed" : {
+          "vertical" : 0
         }
       }
     }
