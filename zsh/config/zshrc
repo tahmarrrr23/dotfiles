@@ -1,21 +1,17 @@
-# xdg
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# disable zsh_history
-unset HISTFILE
-
-# reload alias
 alias reload='exec $SHELL -l'
+alias ls="ls -G"
+alias ll="ls -Gl"
+alias la="ls -Gla"
 
-# change completion cache location
-autoload -U compinit
-compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
-zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+unset HISTFILE
+autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
 
-# enable sheldon
 if [[ -x ${commands[sheldon]} ]] && [[ -d "$XDG_CONFIG_HOME/sheldon" ]]; then
   eval "$(sheldon source)"
 fi
