@@ -1,10 +1,9 @@
 {
-  // editor
+  // Text Editor
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.codeLens": false,
   "editor.copyWithSyntaxHighlighting": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.dragAndDrop": false,
   "editor.guides.bracketPairs": "active",
   "editor.linkedEditing": true,
@@ -12,66 +11,79 @@
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
 
-  // editor - cursor
+  // Text Editor - Cursor
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "explicit",
 
-  // editor - font
+  // Text Editor - Font
   "editor.fontSize": 14,
-  "editor.fontFamily": "'UDEV Gothic 35NF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "PlemolJP35 Console NF Text",
 
-  // editor - minimap
+  // Text Editor - Minimap
   "editor.minimap.enabled": false,
 
-  // editor - files
+  // Text Editor - Files
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+  },
   "files.insertFinalNewline": true,
 
-  // workbench
+  // Workbench
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
   "workbench.navigationControl.enabled": false,
   "workbench.startupEditor": "none",
 
-  // workbench - appearance
+  // Workbench - Appearance
+  "workbench.colorTheme": "Panda Syntax",
+  "workbench.iconTheme": "catppuccin-latte",
   "workbench.tree.indent": 20,
 
-  // workbench - breadcrumbs
-  "breadcrumbs.enabled": false,
-
-  // window
+  // Window
   "window.commandCenter": false,
 
-  // features - explorer
+  // Features - Explorer
   "explorer.compactFolders": false,
   "explorer.sortOrderLexicographicOptions": "unicode",
 
-  // features - terminal
+  // Features - Extensions
+  "extensions.ignoreRecommendations": true,
+
+  // Features - Terminal
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorWidth": 4,
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.scrollback": 100000,
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.suggest.enabled": false,
 
-  // features - chat
-  "chat.commandCenter.enabled": false,
+  // Language Specific
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
 
-  // extensions
-  "extensions.ignoreRecommendations": true,
+  // Extensions
+  "catppuccin-icons.hidesExplorerArrows": true,
+  "catppuccin-icons.specificFolders": false,
   "git-graph.date.format": "ISO Date & Time",
   "github.copilot.chat.localeOverride": "ja",
   "github.copilot.nextEditSuggestions.enabled": true,
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
   "path-intellisense.absolutePathToWorkspace": false,
   "path-intellisense.showHiddenFiles": true,
   "python.analysis.autoImportCompletions": true,
   "python.terminal.activateEnvironment": false,
-
-  // languages
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-  }
+  "redhat.telemetry.enabled": false,
 }
