@@ -1,5 +1,3 @@
-if ! command -v atuin >/dev/null 2>&1; then
-  return
-fi
+[[ ! -x ${commands[atuin]} ]] && return
 
 eval "$(atuin init zsh --disable-up-arrow)"
