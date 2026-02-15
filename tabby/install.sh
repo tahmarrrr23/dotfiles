@@ -1,9 +1,8 @@
 #!/bin/sh
+
 set -eu
 
-root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+config_src="$(cd "$(dirname "$0")" && pwd)/config/config.yaml"
+config_dst="$HOME/Library/Application Support/tabby/config.yaml"
 
-echo "[tabby] configure"
-
-rm -rf "$HOME/Library/Application Support/tabby/config.yaml"
-ln -sfn "$root_directory/tabby/config/config.yaml" "$HOME/Library/Application Support/tabby/config.yaml"
+rm -rf "$config_dst" && ln -sfn "$config_src" "$config_dst"

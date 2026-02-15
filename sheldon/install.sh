@@ -1,9 +1,8 @@
 #!/bin/sh
+
 set -eu
 
-root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+config_src="$(cd "$(dirname "$0")" && pwd)/config"
+config_dst="$HOME/.config/sheldon"
 
-echo "[sheldon] configure"
-
-rm -rf "$HOME/.config/sheldon"
-ln -sfn "$root_directory/sheldon/config" "$HOME/.config/sheldon"
+rm -rf "$config_dst" && ln -sfn "$config_src" "$config_dst"

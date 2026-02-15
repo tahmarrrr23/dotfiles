@@ -1,9 +1,8 @@
 #!/bin/sh
+
 set -eu
 
-root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+config_src="$(cd "$(dirname "$0")" && pwd)/config/settings.json"
+config_dst="$HOME/Library/Application Support/Code/User/settings.json"
 
-echo "[vscode] configure"
-
-rm -rf "$HOME/Library/Application\ Support/Code/User/settings.json"
-ln -sfn "$root_directory/vscode/config/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+rm -rf "$config_dst" && ln -sfn "$config_src" "$config_dst"

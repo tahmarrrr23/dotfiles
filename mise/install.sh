@@ -1,9 +1,8 @@
 #!/bin/sh
+
 set -eu
 
-root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+config_src="$(cd "$(dirname "$0")" && pwd)/config"
+config_dst="$HOME/.config/mise"
 
-echo "[mise] configure"
-
-rm -rf "$HOME/.config/mise"
-ln -sfn "$root_directory/mise/config" "$HOME/.config/mise"
+rm -rf "$config_dst" && ln -sfn "$config_src" "$config_dst"

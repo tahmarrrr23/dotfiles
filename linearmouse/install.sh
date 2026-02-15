@@ -1,9 +1,8 @@
 #!/bin/sh
+
 set -eu
 
-root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+config_src="$(cd "$(dirname "$0")" && pwd)/config"
+config_dst="$HOME/.config/linearmouse"
 
-echo "[linearmouse] configure"
-
-rm -rf "$HOME/.config/linearmouse"
-ln -sfn "$root_directory/linearmouse/config" "$HOME/.config/linearmouse"
+rm -rf "$config_dst" && ln -sfn "$config_src" "$config_dst"

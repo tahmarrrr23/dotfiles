@@ -1,9 +1,8 @@
 #!/bin/sh
+
 set -eu
 
-root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+config_src="$(cd "$(dirname "$0")" && pwd)/config"
+config_dst="$HOME/.config/rio"
 
-echo "[rio] configure"
-
-rm -rf "$HOME/.config/rio"
-ln -sfn "$root_directory/rio/config" "$HOME/.config/rio"
+rm -rf "$config_dst" && ln -sfn "$config_src" "$config_dst"

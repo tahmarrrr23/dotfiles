@@ -1,9 +1,8 @@
 #!/bin/sh
+
 set -eu
 
-root_directory="$(cd "$(dirname "$0")/.." && pwd)"
+config_src="$(cd "$(dirname "$0")" && pwd)/config/starship.toml"
+config_dst="$HOME/.config/starship.toml"
 
-echo "[starship] configure"
-
-rm -rf "$HOME/.config/starship.toml"
-ln -sfn "$root_directory/starship/config/starship.toml" "$HOME/.config/starship.toml"
+rm -rf "$config_dst" && ln -sfn "$config_src" "$config_dst"
