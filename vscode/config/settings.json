@@ -25,7 +25,7 @@
   // Text Editor - Files
   "files.exclude": {
     "**/__pycache__": true,
-    "**/*.pyc": true,
+    "**/*.pyc": true
   },
   "files.insertFinalNewline": true,
 
@@ -63,16 +63,16 @@
 
   // Language Specific
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "[json][jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   // Extensions
@@ -81,9 +81,10 @@
   "git-graph.date.format": "ISO Date & Time",
   "github.copilot.chat.localeOverride": "ja",
   "github.copilot.nextEditSuggestions.enabled": true,
+  "mypy-type-checker.importStrategy": "fromEnvironment",
   "path-intellisense.absolutePathToWorkspace": false,
   "path-intellisense.showHiddenFiles": true,
   "python.analysis.autoImportCompletions": true,
   "python.terminal.activateEnvironment": false,
-  "redhat.telemetry.enabled": false,
+  "redhat.telemetry.enabled": false
 }
