@@ -1,6 +1,6 @@
 adjust-cell-height = 1
 adjust-cell-width = 0
-auto-update-channel = tip
+auto-update-channel = stable
 background-blur = true
 background-opacity = 0.8
 clipboard-paste-bracketed-safe = true
