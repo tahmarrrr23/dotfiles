@@ -1,6 +1,18 @@
 style = "full"
-history_filter = ["^cd", "^code", "^la", "^ll", "^ls", "^reload$"]
 enter_accept = false
+history_filter = [
+    "^ ",
+    "^cd",
+    "^clear$",
+    "^code",
+    "^exit$",
+    "^history",
+    "^la$",
+    "^ll$",
+    "^ls",
+    "^pwd$",
+    "^reload$",
+]
 
 [sync]
 records = true
