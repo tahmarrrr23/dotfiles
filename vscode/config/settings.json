@@ -79,6 +79,7 @@
   "catppuccin-icons.hidesExplorerArrows": true,
   "catppuccin-icons.specificFolders": false,
   "chat.tips.enabled": false,
+  "chat.viewSessions.orientation": "stacked",
   "csv-edit.fontFamilyInTable": "sameAsCodeEditor",
   "git-graph.date.format": "ISO Date & Time",
   "github.copilot.chat.localeOverride": "ja",
