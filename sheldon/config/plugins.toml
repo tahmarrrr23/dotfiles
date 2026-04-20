@@ -1,5 +1,8 @@
 shell = "zsh"
 
+[plugins.android]
+local = "~/.config/sheldon/local"
+
 [plugins.atuin]
 local = "~/.config/sheldon/local"
 
