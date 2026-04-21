@@ -1,5 +1,5 @@
 [tools]
-java = "17"
+java = "21"
 node = "24"
 pnpm = "10"
 python = "3.12"
