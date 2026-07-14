@@ -1,49 +1,32 @@
 #!/bin/bash
 set -eu
+
 cd "$(dirname "$0")"
 
-[ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # zsh
-ln -nfs "$PWD/zsh/zshrc" "$HOME/.zshrc"
+rm -rf "$HOME/.zshrc"
+ln -sfn "$PWD/zsh/zshrc" "$HOME/.zshrc"
 
 # vscode
-ln -nfs "$PWD/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+rm -rf "$HOME/Library/Application Support/Code/User/settings.json"
+ln -sfn "$PWD/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 
 # sheldon
-if [ ! -d "$HOME/.config/sheldon" ]; then
-  sheldon init --shell zsh
-fi
-ln -nfs "$PWD"/sheldon/plugins.toml "$HOME"/.config/sheldon/plugins.toml
-ln -nfs "$PWD"/sheldon/local "$HOME"/.config/sheldon/local
-
-# tabby
-ln -nfs "$PWD/tabby/config.yaml" "$HOME/Library/Application Support/tabby/config.yaml"
-
-# starship
-ln -nfs "$PWD/starship/starship.toml" "$HOME/.config/starship.toml"
-
-# wezterm
-mkdir -p "$HOME"/.config/wezterm
-ln -nfs "$PWD/wezterm/wezterm.lua" "$HOME/.config/wezterm/wezterm.lua"
+rm -rf "$HOME/.config/sheldon"
+ln -sfn "$PWD"/sheldon "$HOME"/.config/sheldon
 
 # ghostty
-mkdir -p "$HOME"/.config/ghostty
-ln -nfs "$PWD/ghostty/config" "$HOME/.config/ghostty/config"
+rm -rf "$HOME/.config/ghostty"
+ln -sfn "$PWD/ghostty" "$HOME/.config/ghostty"
 
 # linearmouse
-mkdir -p "$HOME"/.config/linearmouse
-ln -fns "$PWD/linearmouse/linearmouse.json" "$HOME/.config/linearmouse/linearmouse.json"
+rm -rf "$HOME/.config/linearmouse"
+ln -sfn "$PWD/linearmouse" "$HOME/.config/linearmouse"
 
 # mise
-mkdir -p "$HOME"/.config/mise
-ln -nfs "$PWD/mise/config.toml" "$HOME/.config/mise/config.toml"
+rm -rf "$HOME/.config/mise"
+ln -sfn "$PWD/mise" "$HOME/.config/mise"
 
 # atuin
-mkdir -p "$HOME"/.config/atuin
-ln -nfs "$PWD/atuin/config.toml" "$HOME/.config/atuin/config.toml"
-
-# rio
-mkdir -p "$HOME"/.config/rio
-ln -nfs "$PWD/rio/config.toml" "$HOME/.config/rio/config.toml"
-ln -nfs "$PWD/rio/themes" "$HOME/.config/rio/themes"
+rm -rf "$HOME/.config/atuin"
+ln -sfn "$PWD/atuin" "$HOME/.config/atuin"
