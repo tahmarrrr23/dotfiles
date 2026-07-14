@@ -1,19 +1,33 @@
+# xdg
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+# alias
 alias reload='exec $SHELL -l'
-alias ls="ls -G"
-alias ll="ls -Gl"
-alias la="ls -Gla"
+alias ls='ls -G'
+alias ll='ls -Gl'
+alias la='ls -Gla'
 
+# hist
 unset HISTFILE
+HISTSIZE=0
+SAVEHIST=0
+fc -p /dev/null 0 0
+
+# comp
+zmodload zsh/complist
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:descriptions' format '%F{yellow}%d%f'
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
 
+# ignition
 if [[ -x ${commands[sheldon]} ]] && [[ -d "$XDG_CONFIG_HOME/sheldon" ]]; then
   eval "$(sheldon source)"
 fi
