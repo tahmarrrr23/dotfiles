@@ -19,13 +19,8 @@ fc -p /dev/null 0 0
 # comp
 zmodload zsh/complist
 autoload -Uz compinit
+zstyle ':completion:*' menu select
 compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' verbose yes
-zstyle ':completion:*:descriptions' format '%F{yellow}%d%f'
-zstyle ':completion:*:*:*:*:*' menu select
-zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
 
 # ignition
 if [[ -x ${commands[sheldon]} ]] && [[ -d "$XDG_CONFIG_HOME/sheldon" ]]; then
