@@ -43,6 +43,10 @@
   // Window
   "window.commandCenter": false,
 
+  // Chat - Appearance
+  "chat.tips.enabled": false,
+  "chat.viewSessions.orientation": "stacked",
+
   // Features - Explorer
   "explorer.compactFolders": false,
   "explorer.sortOrderLexicographicOptions": "unicode",
@@ -78,8 +82,7 @@
   // Extensions
   "catppuccin-icons.hidesExplorerArrows": true,
   "catppuccin-icons.specificFolders": false,
-  "chat.tips.enabled": false,
-  "chat.viewSessions.orientation": "stacked",
+  "chat.titleBar.openInAgentsWindow.enabled": false,
   "csv-edit.fontFamilyInTable": "sameAsCodeEditor",
   "git-graph.date.format": "ISO Date & Time",
   "github.copilot.chat.localeOverride": "ja",
