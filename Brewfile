@@ -1,4 +1,4 @@
-tap "jandedobbeleer/oh-my-posh"
+tap "jandedobbeleer/oh-my-posh", trusted: true
 brew "atuin"
 brew "bat"
 brew "btop"
@@ -21,7 +21,7 @@ brew "nmap"
 brew "pwgen"
 brew "sheldon"
 brew "zsh"
-brew "jandedobbeleer/oh-my-posh/oh-my-posh", trusted: true
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 cask "android-studio"
 cask "cyberduck"
 cask "discord"
