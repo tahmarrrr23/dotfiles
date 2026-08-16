@@ -1,5 +1,5 @@
+update_check = false
 style = "full"
-enter_accept = false
 history_filter = [
     "^cd(?:[[:space:]]|$)",
     "^code(?:[[:space:]]|$)",
@@ -12,9 +12,7 @@ history_filter = [
     "^pwd$",
     "^reload$",
 ]
-
-[sync]
-records = true
+command_chaining = true
 
 [ui]
 columns = ["exit", "datetime", "command"]
