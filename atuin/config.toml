@@ -1,15 +1,14 @@
 style = "full"
 enter_accept = false
 history_filter = [
-    "^ ",
-    "^cd",
-    "^clear$",
-    "^code",
-    "^exit$",
-    "^history",
+    "^cd(?:[[:space:]]|$)",
+    "^code(?:[[:space:]]|$)",
+    "^command[[:space:]]+-v(?:[[:space:]]|$)",
+    "^git[[:space:]]+status(?:[[:space:]]|$)",
+    "^history(?:[[:space:]]|$)",
     "^la$",
     "^ll$",
-    "^ls",
+    "^ls(?:[[:space:]]|$)",
     "^pwd$",
     "^reload$",
 ]
