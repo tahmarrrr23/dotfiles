@@ -1,16 +1,17 @@
 update_check = false
 style = "full"
 history_filter = [
-    "^cd(?:[[:space:]]|$)",
-    "^code(?:[[:space:]]|$)",
-    "^command[[:space:]]+-v(?:[[:space:]]|$)",
-    "^git[[:space:]]+status(?:[[:space:]]|$)",
-    "^history(?:[[:space:]]|$)",
-    "^la$",
-    "^ll$",
-    "^ls(?:[[:space:]]|$)",
-    "^pwd$",
-    "^reload$",
+    '^cd\b',
+    '^clear\b',
+    '^code\b',
+    '^exit\b',
+    '^history\b',
+    '^la\b',
+    '^ll\b',
+    '^logout\b',
+    '^ls\b',
+    '^pwd\b',
+    '^reload\b',
 ]
 command_chaining = true
 
