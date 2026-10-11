@@ -92,5 +92,15 @@
   "path-intellisense.showHiddenFiles": true,
   "python.analysis.autoImportCompletions": true,
   "python.terminal.activateEnvironment": false,
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "yaml.disableSchemaDetection": [
+    "**/compose.*.yaml",
+    "**/compose.*.yml",
+    "**/compose.yaml",
+    "**/compose.yml",
+    "**/docker-compose.*.yaml",
+    "**/docker-compose.*.yml",
+    "**/docker-compose.yaml",
+    "**/docker-compose.yml"
+  ]
 }
