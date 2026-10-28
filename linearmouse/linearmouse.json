@@ -5,9 +5,10 @@
       "if": {
         "device": {
           "category": "mouse",
-          "productID": "0x101b",
-          "productName": "ATK Mouse 8K Dongle",
-          "vendorID": "0x373b"
+          "productID": "0xa882",
+          "productName": "WLMOUSE 1K RECEIVER",
+          "serialNumber": "82126539",
+          "vendorID": "0x36a7"
         }
       },
       "pointer": {
